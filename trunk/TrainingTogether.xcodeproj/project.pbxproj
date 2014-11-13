@@ -15,6 +15,8 @@
 		0CBFB4261A14B561007DCC1E /* storage.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0CBFB4251A14B561007DCC1E /* storage.sqlite */; };
 		0CBFB4281A14BD94007DCC1E /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0CBFB4271A14BD94007DCC1E /* Podfile */; };
 		0CBFB42B1A14CB46007DCC1E /* Program.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB42A1A14CB46007DCC1E /* Program.m */; };
+		0CBFB4301A14F6CB007DCC1E /* Difficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB42F1A14F6CB007DCC1E /* Difficulty.m */; };
+		0CBFB4331A14FE9F007DCC1E /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4321A14FE9F007DCC1E /* Exercise.m */; };
 		5B070C857A13FA2F6B8A7A5F /* libPods-TrainingTogether.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D77BDAAF47963FBBF9DB516D /* libPods-TrainingTogether.a */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,10 @@
 		0CBFB4291A14CB46007DCC1E /* Program.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Program.h; sourceTree = "<group>"; };
 		0CBFB42A1A14CB46007DCC1E /* Program.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Program.m; sourceTree = "<group>"; };
 		0CBFB42C1A14D202007DCC1E /* libPods-TrainingTogether-FMDB.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-TrainingTogether-FMDB.a"; path = "Pods/build/Debug-iphoneos/libPods-TrainingTogether-FMDB.a"; sourceTree = "<group>"; };
+		0CBFB42E1A14F6CB007DCC1E /* Difficulty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Difficulty.h; sourceTree = "<group>"; };
+		0CBFB42F1A14F6CB007DCC1E /* Difficulty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Difficulty.m; sourceTree = "<group>"; };
+		0CBFB4311A14FE9F007DCC1E /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		0CBFB4321A14FE9F007DCC1E /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
 		567B388E4E17264F73FF658F /* Pods-TrainingTogether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingTogether.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingTogether/Pods-TrainingTogether.release.xcconfig"; sourceTree = "<group>"; };
 		BBBAD250094C1EC1F6701F0C /* Pods-TrainingTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingTogether/Pods-TrainingTogether.debug.xcconfig"; sourceTree = "<group>"; };
 		D77BDAAF47963FBBF9DB516D /* libPods-TrainingTogether.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrainingTogether.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,7 +139,11 @@
 		0CBFB4211A14B4F4007DCC1E /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				0CBFB42E1A14F6CB007DCC1E /* Difficulty.h */,
+				0CBFB4311A14FE9F007DCC1E /* Exercise.h */,
 				0CBFB4291A14CB46007DCC1E /* Program.h */,
+				0CBFB42F1A14F6CB007DCC1E /* Difficulty.m */,
+				0CBFB4321A14FE9F007DCC1E /* Exercise.m */,
 				0CBFB42A1A14CB46007DCC1E /* Program.m */,
 			);
 			path = Classes;
@@ -315,7 +325,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CBFB4201A14B4A1007DCC1E /* main.m in Sources */,
+				0CBFB4331A14FE9F007DCC1E /* Exercise.m in Sources */,
 				0CBFB42B1A14CB46007DCC1E /* Program.m in Sources */,
+				0CBFB4301A14F6CB007DCC1E /* Difficulty.m in Sources */,
 				0CBFB41E1A14B4A1007DCC1E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
