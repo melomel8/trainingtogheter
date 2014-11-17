@@ -1,0 +1,56 @@
+/* 
+  Localizable.strings
+  TrainingTogether
+
+  Created by Alessio Melani on 17/11/14.
+  Copyright (c) 2014 Alessio Melani. All rights reserved.
+*/
+
+/* LIVELLI DI ALLENAMENTO */
+"basic"         =   "Base";
+"easy"          =   "Facile";
+"medium"        =   "Medio";
+"advanced"      =   "Avanzato";
+"top"           =   "Top";
+"overthetop"    =   "Over The Top";
+
+/* ESERCIZI */
+"exercise1"      =   "Plank statico frontale a 4 appoggi";
+"exercise2"      =   "Plank statico laterale sinistro a 3 appoggi";
+"exercise3"      =   "Plank statico laterale destro a 3 appoggi";
+"exercise4"      =   "Ponte per glutei statico a 4 appoggi";
+"exercise5"      =   "Bench statico a 4 appoggi";
+"exercise6"      =   "Plank dinamico a 4 appoggi";
+"exercise7"      =   "Plank laterale dinamico a 3 appoggi a sinistra";
+"exercise8"      =   "Plank laterale dinamico a 3 appoggi a destra";
+"exercise9"      =   "Ponte per glutei dinamico a 4 appoggi";
+"exercise10"     =   "Piegamenti braccia fino a 90°";
+"exercise11"     =   "Plank laterale statico a sinistra a 2 appoggi con sostegno";
+"exercise12"     =   "Plank laterale statico a destra a 2 appoggi con sostegno";
+"exercise13"     =   "Bench statico braccia sfalsate";
+"exercise14"     =   "Plank dinamico con torsione degli arti superiori";
+"exercise15"     =   "Ponte per glutei dinamico a 3 appoggi con torsione arti superiori";
+"exercise16"     =   "Bench dinamico braccia sfalsate";
+"exercise17"     =   "Plank a 3 appoggi con torsione degli arti inferiori";
+"exercise18"     =   "Bench laterale dinamico in torsione a sinistra";
+"exercise19"     =   "Bench laterale dinamico in torsione a destra";
+"exercise20"     =   "Ponte per glutei dinamico a 2 appoggi con torsione arti inferiori";
+"exercise21"     =   "Plank statico a 3 appoggi";
+"exercise22"     =   "Plank laterale dinamico a sinistra con contatto gomito ginocchio e apertura a 2 appoggi";
+"exercise23"     =   "Plank laterale dinamico a destra con contatto gomito ginocchio e apertura a 2 appoggi";
+"exercise24"     =   "Ponte per glutei statico a 2 appoggi destra e sinistra";
+"exercise25"     =   "Plank statico a 3 appoggi con singolo sostegno negli arti superiori";
+"exercise26"     =   "Plank statico a 3 appoggi con singolo sostegno negli arti inferiori";
+"exercise27"     =   "Plank laterale dinamico con contatto gomito ginocchio e a seguire torsione avanti dietro arto inferiore a sinistra";
+"exercise28"     =   "Plank laterale dinamico con contatto gomito ginocchio e a seguire torsione avanti dietro arto inferiore a destra";
+"exercise29"     =   "Ponte per glutei dinamico a 2 appoggi alternato";
+"exercise30"     =   "Bench statico a 3 appoggi con braccia a 90°";
+"exercise31"     =   "Plank a 3 appoggi dinamico arti inferiori";
+"exercise32"     =   "Plank statico a 2 appoggi";
+"exercise33"     =   "Bench laterale a 2 appoggi con pendolo su piede esterno a destra";
+"exercise34"     =   "Bench laterale a 2 appoggi con pendolo su piede esterno a sinistra";
+"exercise35"     =   "Ponte dinamico a 3 appoggi e 2 appoggi";
+"exercise36"     =   "Bench statico a 2 appoggi";
+"exercise37"     =   "Plank dinamico a 2 appoggi";
+"exercise38"     =   "Bench dinamico in torsione a due appoggi";
+"exercise39"     =   "Bench dinamico a 2 appoggi con incontro gomito ginocchio";
