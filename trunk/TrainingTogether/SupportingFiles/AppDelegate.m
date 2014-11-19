@@ -10,13 +10,46 @@
 
 @interface AppDelegate ()
 
+- (void)createEditableCopyOfDb;
+
 @end
 
 @implementation AppDelegate
 
+- (void)createEditableCopyOfDb
+{
+    NSString* dbFilePath = nil;
+    NSArray* searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentFolderPath = [searchPaths objectAtIndex:0];
+    dbFilePath = [documentFolderPath stringByAppendingPathComponent:@"storage.sqlite"];
+    
+    //copia della base di dati
+    if (![[NSFileManager defaultManager] fileExistsAtPath:dbFilePath])
+    {
+        NSString* backupDbPath = [[NSBundle mainBundle] pathForResource:@"storage" ofType:@"sqlite"];
+        if (backupDbPath == nil)
+        {
+            NSLog(@"Database path is nil");
+        }
+        else
+        {
+            BOOL copiedBackupDb = [[NSFileManager defaultManager] copyItemAtPath:backupDbPath toPath:dbFilePath error:nil];
+            if (!copiedBackupDb)
+            {
+                NSLog(@"Copying database failed");
+            }
+            else
+            {
+                NSLog(@"Copying database succeed");
+            }
+        }
+    }
+}
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    [self createEditableCopyOfDb];
+    
     return YES;
 }
 

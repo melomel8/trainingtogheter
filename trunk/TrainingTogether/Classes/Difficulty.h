@@ -17,7 +17,6 @@
     NSInteger DifficultyId;
     NSString* DifficultyName;
     NSString* DifficultyNote;
-    
 }
 
 @property(nonatomic, assign) NSInteger DifficultyId;
@@ -28,7 +27,7 @@
  Costruttore che inizializza un Difficulty
  @param resultSet Result Set che contiene i dati del livello di difficoltà
  */
--(id)initFromResultSet:(FMResultSet*)resultSet;
+- (id)initFromResultSet:(FMResultSet*)resultSet;
 
 
 
