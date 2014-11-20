@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */; };
 		0CA9B0521A1CDA1E002711C6 /* LevelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */; };
 		0CA9B0551A1CDA8E002711C6 /* LevelSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */; };
 		0CA9B0581A1CEBB6002711C6 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9B0571A1CEBB6002711C6 /* DBManager.m */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DifficultyCell.xib; sourceTree = "<group>"; };
 		0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectViewController.h; sourceTree = "<group>"; };
 		0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectViewController.m; sourceTree = "<group>"; };
 		0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelSelectViewController.xib; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */,
+				0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */,
+				0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */,
 				0CBFB4261A14B561007DCC1E /* storage.sqlite in Resources */,
 				0CBFB3F61A14AF0E007DCC1E /* Images.xcassets in Resources */,
 				0CBFB4281A14BD94007DCC1E /* Podfile in Resources */,

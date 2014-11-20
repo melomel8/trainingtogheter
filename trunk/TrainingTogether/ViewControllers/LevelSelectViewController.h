@@ -11,6 +11,9 @@
 @interface LevelSelectViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet    UITableView*        levelTable;
+    IBOutlet    UITableViewCell*    levelCell;
+    IBOutlet    UIImageView*        levelImageView;
+    IBOutlet    UILabel*            levelNameLabel;
                 NSArray*            difficultiesArray;
 }
 

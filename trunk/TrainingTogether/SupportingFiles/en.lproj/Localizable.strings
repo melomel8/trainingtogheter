@@ -6,6 +6,9 @@
   Copyright (c) 2014 Alessio Melani. All rights reserved.
 */
 
+/* TITLES */
+"levelSelectionTitle" = "Select Your Level";
+
 /* TRAINING LEVELS */
 "basic"         =   "Basic";
 "easy"          =   "Easy";

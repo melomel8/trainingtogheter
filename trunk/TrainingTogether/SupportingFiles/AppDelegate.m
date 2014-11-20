@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LevelSelectViewController.h"
 
 @interface AppDelegate ()
 
@@ -49,6 +50,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self createEditableCopyOfDb];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    LevelSelectViewController* vController = [[LevelSelectViewController alloc] initWithNibName:@"LevelSelectViewController" bundle:nil];
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:vController ];
+    
+    self.window.rootViewController = navController;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
