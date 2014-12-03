@@ -17,7 +17,7 @@ static FMDatabase *db;
     db = [FMDatabase databaseWithPath:[DBUtil dbPath]];
     if (![db open]) 
     {
-        NSLog(@"Error in opening DB");
+        DLog(@"Error in opening DB");
         return nil;
     }
 	return db;

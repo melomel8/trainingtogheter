@@ -8,6 +8,8 @@
 
 /* TITLES */
 "levelSelectionTitle" = "Select Your Level";
+"programDetailTitle"  = "Program Detail";
+"exerciseDetailTitle" = "Exercise Detail";
 
 /* TRAINING LEVELS */
 "basic"         =   "Basic";
@@ -27,33 +29,37 @@
 "exercise7"      =   "";
 "exercise8"      =   "";
 "exercise9"      =   "";
-"exercise10"      =   "";
-"exercise11"      =   "";
-"exercise12"      =   "";
-"exercise13"      =   "";
-"exercise14"      =   "";
-"exercise15"      =   "";
-"exercise16"      =   "";
-"exercise17"      =   "";
-"exercise18"      =   "";
-"exercise19"      =   "";
-"exercise20"      =   "";
-"exercise21"      =   "";
-"exercise22"      =   "";
-"exercise23"      =   "";
-"exercise24"      =   "";
-"exercise25"      =   "";
-"exercise26"      =   "";
-"exercise27"      =   "";
-"exercise28"      =   "";
-"exercise29"      =   "";
-"exercise30"      =   "";
-"exercise31"      =   "";
-"exercise32"      =   "";
-"exercise33"      =   "";
-"exercise34"      =   "";
-"exercise35"      =   "";
-"exercise36"      =   "";
-"exercise37"      =   "";
-"exercise38"      =   "";
-"exercise39"      =   "";
+"exercise10"     =   "";
+"exercise11"     =   "";
+"exercise12"     =   "";
+"exercise13"     =   "";
+"exercise14"     =   "";
+"exercise15"     =   "";
+"exercise16"     =   "";
+"exercise17"     =   "";
+"exercise18"     =   "";
+"exercise19"     =   "";
+"exercise20"     =   "";
+"exercise21"     =   "";
+"exercise22"     =   "";
+"exercise23"     =   "";
+"exercise24"     =   "";
+"exercise25"     =   "";
+"exercise26"     =   "";
+"exercise27"     =   "";
+"exercise28"     =   "";
+"exercise29"     =   "";
+"exercise30"     =   "";
+"exercise31"     =   "";
+"exercise32"     =   "";
+"exercise33"     =   "";
+"exercise34"     =   "";
+"exercise35"     =   "";
+"exercise36"     =   "";
+"exercise37"     =   "";
+"exercise38"     =   "";
+"exercise39"     =   "";
+
+/* MESSAGES*/
+"noProgramsTitle"   =   "No Programs";
+"noProgramsMessage" =   "There are any programs for this level";

@@ -30,18 +30,18 @@
         NSString* backupDbPath = [[NSBundle mainBundle] pathForResource:@"storage" ofType:@"sqlite"];
         if (backupDbPath == nil)
         {
-            NSLog(@"Database path is nil");
+            DLog(@"Database path is nil");
         }
         else
         {
             BOOL copiedBackupDb = [[NSFileManager defaultManager] copyItemAtPath:backupDbPath toPath:dbFilePath error:nil];
             if (!copiedBackupDb)
             {
-                NSLog(@"Copying database failed");
+                DLog(@"Copying database failed");
             }
             else
             {
-                NSLog(@"Copying database succeed");
+                DLog(@"Copying database succeed");
             }
         }
     }

@@ -8,6 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExerciseDetailViewController : UIViewController
+@interface ExerciseDetailViewController : UIViewController <UIScrollViewDelegate>
+{
+    NSInteger   ExerciseId;
+    NSString*   ExerciseName;
+    NSString*   ExerciseRepCharge;
+    NSString*   ExerciseInstructions;
+    NSArray*    exerciseArray;
+    
+    IBOutlet    UILabel*        exerciseNameLabel;
+    IBOutlet    UIScrollView*   exerciseImgScrollView;
+    IBOutlet    UIPageControl*  exerciseImgPageControl;
+    IBOutlet    UILabel*        exerciseRepChargeLabel;
+    IBOutlet    UITextView*     exerciseInstructionsTextView;
+}
+
+@property (nonatomic, assign) NSInteger ExerciseId;
+@property (nonatomic, retain) NSString* ExerciseName;
+@property (nonatomic, retain) NSString* ExerciseRepCharge;
+@property (nonatomic, retain) NSString* ExerciseInstructions;
 
 @end

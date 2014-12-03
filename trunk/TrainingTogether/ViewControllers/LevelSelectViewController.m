@@ -8,6 +8,10 @@
 
 #import "LevelSelectViewController.h"
 #import "DBManager.h"
+#import "ProgramDetailViewController.h"
+
+#define IMAGE_VIEW_TAG 1
+#define LABEL_TAG 2
 
 @interface LevelSelectViewController ()
 
@@ -20,6 +24,7 @@
     [super viewDidLoad];
     
     difficultiesArray = [DBManager getAllDifficulty];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -55,17 +60,43 @@
     {
         [[NSBundle mainBundle] loadNibNamed:@"DifficultyCell" owner:self options:NULL];
         theCell = levelCell;
-        //theCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL_IDENTIFIER];
     }
+    
+    //prendo i "campi" della cella
+    UIImageView* levelImageView = (UIImageView*)[theCell viewWithTag:IMAGE_VIEW_TAG];
+    UILabel* levelNameLabel = (UILabel*)[theCell viewWithTag:LABEL_TAG];
     
     //popolo la cella
     Difficulty* currentDifficulty = [difficultiesArray objectAtIndex:indexPath.row];
     levelNameLabel.text = NSLocalizedString(currentDifficulty.DifficultyName, currentDifficulty.DifficultyName);
+    //provo ad aggiungere la foto
+    UIImage* levelImage = [UIImage imageNamed:@"1.Plank statico frontale a 4 appoggi.jpg"];
+    levelImageView.image = levelImage;
     
     return theCell;
 }
 
 #pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Difficulty* d = [difficultiesArray objectAtIndex:indexPath.row];
+    NSInteger difficultyId = d.DifficultyId;
+    NSInteger programId = [DBManager getProgramIdForDifficultyId:difficultyId];
+    if (programId != -1)
+    {
+        ProgramDetailViewController* programDetailVC = [[ProgramDetailViewController alloc] initWithNibName:@"ProgramDetailViewController" bundle:nil];
+        programDetailVC.DifficultyId = difficultyId;
+        programDetailVC.ProgramId = programId;
+        [self.navigationController pushViewController:programDetailVC animated:YES];
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    }
+    else
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"noProgramsTitle", @"No Programs") message:NSLocalizedString(@"noProgramsMessage", @"noProgramsMessage") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+    }
+}
 
 
 @end

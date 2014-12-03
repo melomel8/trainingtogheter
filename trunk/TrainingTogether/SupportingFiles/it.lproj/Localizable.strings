@@ -8,6 +8,8 @@
 
 /* TITLES */
 "levelSelectionTitle" = "Seleziona il Livello";
+"programDetailTitle"  = "Dettaglio Programma";
+"exerciseDetailTitle" = "Dettaglio Esercizio";
 
 /* LIVELLI DI ALLENAMENTO */
 "basic"         =   "Base";
@@ -57,3 +59,7 @@
 "exercise37"     =   "Plank dinamico a 2 appoggi";
 "exercise38"     =   "Bench dinamico in torsione a due appoggi";
 "exercise39"     =   "Bench dinamico a 2 appoggi con incontro gomito ginocchio";
+
+/* MESSAGGI */
+"noProgramsTitle"   =   "Nessun Programma";
+"noProgramsMessage" =   "Non ci sono programmi per il livello selezionato";

@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProgramDetailViewController : UIViewController
+@interface ProgramDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+{
+    NSInteger   ProgramId;
+    NSInteger   DifficultyId;
+    NSArray*    progrDetailArray;
+    IBOutlet    UITableView*        programDetailTable;
+    IBOutlet    UITableViewCell*    programDetailCel;
+    //IBOutlet    UIImageView*        programDetailImageView;
+    //IBOutlet    UILabel*            programDetailLabelExerciseName;
+    //IBOutlet    UILabel*            programDetailLabelRepCharge;
+}
+
+@property (nonatomic, assign) NSInteger ProgramId;
+@property (nonatomic, assign) NSInteger DifficultyId;
 
 @end

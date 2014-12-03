@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "DBUtil.h"
 #import "Difficulty.h"
+#import "Training.h"
+#import "Exercise.h"
+#import "Media.h"
+
 
 /* Classe che gestisce le query al db */
 @interface DBManager : NSObject
@@ -21,5 +25,25 @@
  @return NSArray* che contiene oggetti di tipo Difficulty
  */
 + (NSArray*)getAllDifficulty;
+
+/**
+ Ritorna tutti gli allenamenti previsti per una certa Difficoltà(difficultyId)
+ e un certo programma(programId)
+ @return NSArray* che contiene oggetti di tipo Training
+ */
++(NSArray*)getTraningsForDifficultiId:(NSInteger)difficultId selectedProgram: (NSInteger)programId;
+
+/**
+ Ritorna il programId di una certa difficoltà(difficultyId)
+ @return NSInteger contenete il programId
+ */
++(NSInteger)getProgramIdForDifficultyId:(NSInteger)difficultyId;
+
+
+/**
+ Ritorna tutti i media <> da video di un certo exerciseId
+ @return NSArray* che contiene oggetti di tipo Media
+ */
++(NSArray*)getMediasForExercise:(NSInteger) exerciseId;
 
 @end
