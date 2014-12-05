@@ -18,6 +18,10 @@
 @property (nonatomic, assign) NSInteger     mediaId;
 @property (nonatomic, retain) NSString*     mediaPath;
 
+/*!
+ Costruttore che inizializza un Media
+ @param resultSet Result Set che contiene tutte le foto di un Exercise
+ */
 -(id)initFromResultSet:(FMResultSet*) resulSet;
 
 @end

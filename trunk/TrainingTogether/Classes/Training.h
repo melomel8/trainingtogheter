@@ -33,7 +33,7 @@
 @property (nonatomic, retain)   NSString*   mediaPath;
 @property (nonatomic, retain)   Exercise*   exercise;
 
-/**
+/*!
  Costruttore che inizializza un Training
  @param resultSet Result Set che contiene i dati dell'allemaneto
  */

@@ -24,7 +24,10 @@
     [super viewDidLoad];
     
     difficultiesArray = [DBManager getAllDifficulty];
-    
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
+    {   // if iOS 7
+        self.edgesForExtendedLayout = UIRectEdgeNone; //layout adjustements
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -58,7 +61,16 @@
     UITableViewCell* theCell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER];
     if (!theCell)
     {
-        [[NSBundle mainBundle] loadNibNamed:@"DifficultyCell" owner:self options:NULL];
+        //TODO rendere generico lo switch della cella tra iphone e Ipad p
+        NSString* deviceModel = [UIDevice currentDevice].model;
+        
+        if ([deviceModel containsString:@"iPad"])
+        
+            [[NSBundle mainBundle] loadNibNamed:@"DifficultyCell_iPad" owner:self options:NULL];
+        else
+            [[NSBundle mainBundle] loadNibNamed:@"DifficultyCell" owner:self options:NULL];
+        
+        
         theCell = levelCell;
     }
     

@@ -21,7 +21,7 @@
 @property(nonatomic, retain)    NSString*   ProgramName;
 @property(nonatomic, retain)    NSString*   ThumbPath;
 
-/**
+/*!
  Costruttore, che inizializza un programma di allenamento a partire da un result set
  @param resultSet Result set che contiene i dati del programma di allenamento
  */

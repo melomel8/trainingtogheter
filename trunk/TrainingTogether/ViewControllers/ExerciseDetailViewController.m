@@ -65,7 +65,7 @@
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     CGFloat pageWidth = exerciseImgScrollView.frame.size.width;
     int page = floor((exerciseImgScrollView.contentOffset.x/pageWidth));

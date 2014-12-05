@@ -23,7 +23,7 @@
 @property(nonatomic, retain) NSString* DifficultyName;
 @property(nonatomic, retain) NSString* DifficultyNote;
 
-/**
+/*!
  Costruttore che inizializza un Difficulty
  @param resultSet Result Set che contiene i dati del livello di difficoltà
  */

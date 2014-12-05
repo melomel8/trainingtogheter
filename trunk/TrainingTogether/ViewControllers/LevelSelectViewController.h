@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LevelSelectViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface LevelSelectViewController : GeneralViewController <UITableViewDataSource, UITableViewDelegate>
 {
     IBOutlet    UITableView*        levelTable;
     IBOutlet    UITableViewCell*    levelCell;

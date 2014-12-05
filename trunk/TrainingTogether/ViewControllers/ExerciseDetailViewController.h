@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ExerciseDetailViewController : UIViewController <UIScrollViewDelegate>
+@interface ExerciseDetailViewController : GeneralViewController <UIScrollViewDelegate>
 {
     NSInteger   ExerciseId;
     NSString*   ExerciseName;

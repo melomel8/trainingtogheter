@@ -23,7 +23,7 @@
 @property (nonatomic, retain) NSString* ExerciseName;
 @property (nonatomic, retain) NSString* ExerciseInstructions;
 
-/**
+/*!
  Costruttore che inizializza un Difficulty
  @param resultSet Result Set che contiene i dati di un esercizio
  */

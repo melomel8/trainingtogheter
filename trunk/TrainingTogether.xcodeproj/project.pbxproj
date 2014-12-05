@@ -30,6 +30,12 @@
 		48998DBD1A1E4741001C89F2 /* ProgramDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */; };
 		48998DC01A1E4F24001C89F2 /* Training.m in Sources */ = {isa = PBXBuildFile; fileRef = 48998DBF1A1E4F24001C89F2 /* Training.m */; };
 		48EB637B1A2CBA2700D344A1 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EB637A1A2CBA2700D344A1 /* Media.m */; };
+		48EB637E1A2F6CD000D344A1 /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */; };
+		48EB63801A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */; };
+		48EB63841A309E1600D344A1 /* ProgramDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB63831A309E1600D344A1 /* ProgramDetailViewController_iPad.xib */; };
+		48EB63861A309E4600D344A1 /* DifficultyCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */; };
+		48EB63881A309E6300D344A1 /* ProgramDetailCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */; };
+		48EB638A1A31F59D00D344A1 /* LevelSelectViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */; };
 		5B070C857A13FA2F6B8A7A5F /* libPods-TrainingTogether.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D77BDAAF47963FBBF9DB516D /* libPods-TrainingTogether.a */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +51,7 @@
 
 /* Begin PBXFileReference section */
 		0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DifficultyCell.xib; sourceTree = "<group>"; };
-		0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelSelectViewController.h; sourceTree = "<group>"; };
+		0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LevelSelectViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectViewController.m; sourceTree = "<group>"; };
 		0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelSelectViewController.xib; sourceTree = "<group>"; };
 		0CA9B0561A1CEBB6002711C6 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
@@ -72,10 +78,10 @@
 		0CBFB4321A14FE9F007DCC1E /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
 		0CEB9D131A1A58B800E397A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CEB9D151A1A58C400E397A4 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		489177931A27385D00FBDB91 /* ExerciseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDetailViewController.h; sourceTree = "<group>"; };
+		489177931A27385D00FBDB91 /* ExerciseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ExerciseDetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDetailViewController.m; sourceTree = "<group>"; };
 		489177981A27391100FBDB91 /* ExerciseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseDetailViewController.xib; sourceTree = "<group>"; };
-		48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramDetailViewController.h; sourceTree = "<group>"; };
+		48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ProgramDetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ProgramDetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		48998DBA1A1E393F001C89F2 /* ProgramDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController.xib; sourceTree = "<group>"; };
 		48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailCell.xib; sourceTree = "<group>"; };
@@ -84,6 +90,13 @@
 		48EB63781A2C871100D344A1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PrefixHeader.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		48EB63791A2CBA2700D344A1 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
 		48EB637A1A2CBA2700D344A1 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
+		48EB637C1A2F6CD000D344A1 /* GeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GeneralViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralViewController.m; sourceTree = "<group>"; };
+		48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		48EB63831A309E1600D344A1 /* ProgramDetailViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DifficultyCell_iPad.xib; sourceTree = "<group>"; };
+		48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailCell_iPad.xib; sourceTree = "<group>"; };
+		48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelSelectViewController_iPad.xib; sourceTree = "<group>"; };
 		567B388E4E17264F73FF658F /* Pods-TrainingTogether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingTogether.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingTogether/Pods-TrainingTogether.release.xcconfig"; sourceTree = "<group>"; };
 		BBBAD250094C1EC1F6701F0C /* Pods-TrainingTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrainingTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrainingTogether/Pods-TrainingTogether.debug.xcconfig"; sourceTree = "<group>"; };
 		D77BDAAF47963FBBF9DB516D /* libPods-TrainingTogether.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrainingTogether.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +182,8 @@
 				0CBFB41C1A14B4A1007DCC1E /* Info.plist */,
 				0CBFB4251A14B561007DCC1E /* storage.sqlite */,
 				0CEB9D141A1A58B800E397A4 /* Localizable.strings */,
+				48EB637C1A2F6CD000D344A1 /* GeneralViewController.h */,
+				48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -222,6 +237,11 @@
 				48998DBA1A1E393F001C89F2 /* ProgramDetailViewController.xib */,
 				0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */,
 				48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */,
+				48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */,
+				48EB63831A309E1600D344A1 /* ProgramDetailViewController_iPad.xib */,
+				48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */,
+				48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */,
+				48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -326,13 +346,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EB63841A309E1600D344A1 /* ProgramDetailViewController_iPad.xib in Resources */,
 				0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */,
 				0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */,
 				48998DBB1A1E393F001C89F2 /* ProgramDetailViewController.xib in Resources */,
 				0CBFB4261A14B561007DCC1E /* storage.sqlite in Resources */,
+				48EB63861A309E4600D344A1 /* DifficultyCell_iPad.xib in Resources */,
 				0CBFB3F61A14AF0E007DCC1E /* Images.xcassets in Resources */,
 				48998DBD1A1E4741001C89F2 /* ProgramDetailCell.xib in Resources */,
 				489177991A27391100FBDB91 /* ExerciseDetailViewController.xib in Resources */,
+				48EB638A1A31F59D00D344A1 /* LevelSelectViewController_iPad.xib in Resources */,
+				48EB63801A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib in Resources */,
+				48EB63881A309E6300D344A1 /* ProgramDetailCell_iPad.xib in Resources */,
 				0CBFB4281A14BD94007DCC1E /* Podfile in Resources */,
 				0CBFB41F1A14B4A1007DCC1E /* Info.plist in Resources */,
 				0CA9B0551A1CDA8E002711C6 /* LevelSelectViewController.xib in Resources */,
@@ -387,6 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				489177961A27385D00FBDB91 /* ExerciseDetailViewController.m in Sources */,
+				48EB637E1A2F6CD000D344A1 /* GeneralViewController.m in Sources */,
 				0CA9B0581A1CEBB6002711C6 /* DBManager.m in Sources */,
 				0CBFB4201A14B4A1007DCC1E /* main.m in Sources */,
 				0CA9B0521A1CDA1E002711C6 /* LevelSelectViewController.m in Sources */,

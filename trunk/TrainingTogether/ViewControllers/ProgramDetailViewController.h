@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProgramDetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface ProgramDetailViewController : GeneralViewController <UITableViewDataSource, UITableViewDelegate>
 {
     NSInteger   ProgramId;
     NSInteger   DifficultyId;
