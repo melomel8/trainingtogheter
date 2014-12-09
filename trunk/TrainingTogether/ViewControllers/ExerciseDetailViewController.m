@@ -9,6 +9,15 @@
 #import "ExerciseDetailViewController.h"
 #import "DBManager.h"
 
+#ifndef EXERCISE_DETAIL_VIEW_CONTROLLER_CONSTANTS
+#define HEIGHT_IPHONE 150.0f
+#define WIDTH_IPHONE 200.0f
+#define GAP_IPHONE 60.0f
+#define HEIGHT_IPAD 433.0f //325.0f
+#define WIDTH_IPAD 576.9f//433.0f
+#define GAP_IPAD 95.5f//167.5f
+#endif
+
 @interface ExerciseDetailViewController ()
 
 @end
@@ -19,14 +28,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     exerciseArray = [DBManager getMediasForExercise:ExerciseId];
+    NSString* deviceModel = [UIDevice currentDevice].model;
+    BOOL isIpad = [deviceModel containsString:@"iPad"];
     //TODO controllare che esista almeno una foto?
     int   NUM_PHOTOS    = exerciseArray.count;
-    float HEIGHT        = 150;
-    float WIDTH         = 200;
-    float GAP           = 60;
+    float HEIGHT        = isIpad ? HEIGHT_IPAD : HEIGHT_IPHONE;
+    float WIDTH         = isIpad ? WIDTH_IPAD : WIDTH_IPHONE;
+    float GAP           = isIpad ? GAP_IPAD : GAP_IPHONE;
     float x             = GAP;
     float Y             = 0;
+    
     DLog(@"Num record in exerciseArray: %d ", NUM_PHOTOS);
     
     
@@ -39,6 +52,10 @@
         UIImage* exerciseImage = [UIImage imageNamed:medias.mediaPath];
         DLog(@"IMG: %@", medias.mediaPath);
         UIImageView* exerciseImageView = [[UIImageView alloc] initWithImage:exerciseImage];
+        //se si tratta di un Ipad è permessa la rotazione in orizzontale e devo ridimensionare anche la UIImageView
+        if (isIpad)
+            exerciseImageView.autoresizingMask= UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin ;//| UIViewAutoresizingFlexibleTopMargin ;
+        
         [exerciseImageView setFrame:CGRectMake(x, Y, WIDTH, HEIGHT)];
         [exerciseImgScrollView addSubview:exerciseImageView];
         x = x + WIDTH + (2*GAP);

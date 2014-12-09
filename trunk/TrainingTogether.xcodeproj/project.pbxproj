@@ -29,10 +29,10 @@
 		48998DBB1A1E393F001C89F2 /* ProgramDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48998DBA1A1E393F001C89F2 /* ProgramDetailViewController.xib */; };
 		48998DBD1A1E4741001C89F2 /* ProgramDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */; };
 		48998DC01A1E4F24001C89F2 /* Training.m in Sources */ = {isa = PBXBuildFile; fileRef = 48998DBF1A1E4F24001C89F2 /* Training.m */; };
+		48B66CA01A37163F00E28791 /* ProgramDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B66C9F1A37163F00E28791 /* ProgramDetailViewController_iPad.xib */; };
 		48EB637B1A2CBA2700D344A1 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EB637A1A2CBA2700D344A1 /* Media.m */; };
 		48EB637E1A2F6CD000D344A1 /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */; };
 		48EB63801A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */; };
-		48EB63841A309E1600D344A1 /* ProgramDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB63831A309E1600D344A1 /* ProgramDetailViewController_iPad.xib */; };
 		48EB63861A309E4600D344A1 /* DifficultyCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */; };
 		48EB63881A309E6300D344A1 /* ProgramDetailCell_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */; };
 		48EB638A1A31F59D00D344A1 /* LevelSelectViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */; };
@@ -87,13 +87,13 @@
 		48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailCell.xib; sourceTree = "<group>"; };
 		48998DBE1A1E4F24001C89F2 /* Training.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Training.h; sourceTree = "<group>"; };
 		48998DBF1A1E4F24001C89F2 /* Training.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Training.m; sourceTree = "<group>"; };
+		48B66C9F1A37163F00E28791 /* ProgramDetailViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController_iPad.xib; sourceTree = "<group>"; };
 		48EB63781A2C871100D344A1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PrefixHeader.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		48EB63791A2CBA2700D344A1 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
 		48EB637A1A2CBA2700D344A1 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
 		48EB637C1A2F6CD000D344A1 /* GeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = GeneralViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralViewController.m; sourceTree = "<group>"; };
 		48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseDetailViewController_iPad.xib; sourceTree = "<group>"; };
-		48EB63831A309E1600D344A1 /* ProgramDetailViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController_iPad.xib; sourceTree = "<group>"; };
 		48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DifficultyCell_iPad.xib; sourceTree = "<group>"; };
 		48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailCell_iPad.xib; sourceTree = "<group>"; };
 		48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelSelectViewController_iPad.xib; sourceTree = "<group>"; };
@@ -238,10 +238,10 @@
 				0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */,
 				48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */,
 				48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */,
-				48EB63831A309E1600D344A1 /* ProgramDetailViewController_iPad.xib */,
+				48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */,
+				48B66C9F1A37163F00E28791 /* ProgramDetailViewController_iPad.xib */,
 				48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */,
 				48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */,
-				48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -346,7 +346,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48EB63841A309E1600D344A1 /* ProgramDetailViewController_iPad.xib in Resources */,
 				0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */,
 				0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */,
 				48998DBB1A1E393F001C89F2 /* ProgramDetailViewController.xib in Resources */,
@@ -361,6 +360,7 @@
 				0CBFB4281A14BD94007DCC1E /* Podfile in Resources */,
 				0CBFB41F1A14B4A1007DCC1E /* Info.plist in Resources */,
 				0CA9B0551A1CDA8E002711C6 /* LevelSelectViewController.xib in Resources */,
+				48B66CA01A37163F00E28791 /* ProgramDetailViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
