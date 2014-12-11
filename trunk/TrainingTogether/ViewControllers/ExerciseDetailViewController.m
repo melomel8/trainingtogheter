@@ -89,4 +89,24 @@
     exerciseImgPageControl.currentPage =page;
 }
 
+#pragma mark - Rotation Handling
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [UIView beginAnimations:@"AnimazioneMoltoFiga" context:NULL];
+    [UIView setAnimationDuration:0.3f];
+    verticalContainer.alpha = 0.0f;
+    horizontalContainer.alpha = 0.0f;
+    [UIView commitAnimations];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    //controllo quale sia l'orientamento del dispositivo e, sulla base di quello, rendo visibile uno dei due container
+    [UIView beginAnimations:@"AnimazioneMoltoFiga" context:NULL];
+    [UIView setAnimationDuration:0.3f];
+    horizontalContainer.alpha = 1.0f;
+    [UIView commitAnimations];
+}
+
 @end
