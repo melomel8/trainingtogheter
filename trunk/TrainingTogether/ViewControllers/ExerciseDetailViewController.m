@@ -103,9 +103,15 @@
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     //controllo quale sia l'orientamento del dispositivo e, sulla base di quello, rendo visibile uno dei due container
+    UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
+    
     [UIView beginAnimations:@"AnimazioneMoltoFiga" context:NULL];
     [UIView setAnimationDuration:0.3f];
-    horizontalContainer.alpha = 1.0f;
+    if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation == UIDeviceOrientationPortraitUpsideDown))
+        verticalContainer.alpha = 1.0f;
+    else
+        horizontalContainer.alpha = 1.0f; //proprietà della view: 0 non visibile, 1 completamente visibile
+    
     [UIView commitAnimations];
 }
 
