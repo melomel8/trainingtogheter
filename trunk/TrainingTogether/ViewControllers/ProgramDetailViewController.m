@@ -56,7 +56,15 @@
     UITableViewCell* progDetailCell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER]; //chiedo al tableView se ci sono celle da poter riutilizzare
     if (!progDetailCell) //se non ci sono celle disponibili
     {
-        [[NSBundle mainBundle] loadNibNamed:@"ProgramDetailCell" owner:self options:NULL]; //creo una cella caricando lo xib nel mainbundle dell'applicazione
+        NSString* deviceModel = [UIDevice currentDevice].model;
+        
+        //creo una cella caricando lo xib nel mainbundle dell'applicazione
+        if ([deviceModel containsString:@"iPad"])
+        
+           [[NSBundle mainBundle] loadNibNamed:@"ProgramDetailCell_iPad" owner:self options:NULL];
+        else
+            [[NSBundle mainBundle] loadNibNamed:@"ProgramDetailCell" owner:self options:NULL]; 
+        
         progDetailCell = programDetailCel; //associo alla cella la variabile legata all'interfaccia grafica
     }
     
