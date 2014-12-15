@@ -16,6 +16,9 @@
 #define HEIGHT_IPAD 433.0f //325.0f
 #define WIDTH_IPAD 576.9f//433.0f
 #define GAP_IPAD 95.5f//167.5f
+#define HEIGHT_IPAD_HORIZ 433.0f
+#define WIDTH_IPAD_HORIZ 576.9f
+#define GAP_IPAD_HORIZ 95.5f
 #endif
 
 @interface ExerciseDetailViewController ()
@@ -30,20 +33,73 @@
     [super viewDidLoad];
     
     exerciseArray = [DBManager getMediasForExercise:ExerciseId];
+    
     NSString* deviceModel = [UIDevice currentDevice].model;
     BOOL isIpad = [deviceModel containsString:@"iPad"];
     //TODO controllare che esista almeno una foto?
     int   NUM_PHOTOS    = exerciseArray.count;
-    float HEIGHT        = isIpad ? HEIGHT_IPAD : HEIGHT_IPHONE;
+    
+    //imposto le dimensioni in base a dispositivo e orientamento
+    /*float HEIGHT        = isIpad ? HEIGHT_IPAD : HEIGHT_IPHONE;
     float WIDTH         = isIpad ? WIDTH_IPAD : WIDTH_IPHONE;
     float GAP           = isIpad ? GAP_IPAD : GAP_IPHONE;
     float x             = GAP;
-    float Y             = 0;
+    float Y             = 0;*/
+    
+    float HEIGHT, WIDTH, GAP, x, y;
+    
+    if (isIpad)
+    {
+        
+        UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
+        if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation== UIDeviceOrientationPortraitUpsideDown))
+        {
+            HEIGHT = HEIGHT_IPAD;
+            WIDTH = WIDTH_IPAD;
+            GAP = GAP_IPAD;
+            x = GAP;
+            y = 0;
+        }
+        else // non è in verticale
+        {
+            HEIGHT = HEIGHT_IPAD_HORIZ;
+            WIDTH = WIDTH_IPAD_HORIZ;
+            GAP = GAP_IPAD_HORIZ;
+            x = GAP;
+            y = 0;
+        }
+    }
+    else //non è un Ipad
+    {
+        HEIGHT = HEIGHT_IPHONE;
+        WIDTH = WIDTH_IPHONE;
+        GAP = GAP_IPHONE;
+        x = GAP;
+        y = 0;
+    }
+    
     
     DLog(@"Num record in exerciseArray: %d ", NUM_PHOTOS);
     
+   /* UIScrollView* sv;   //ScrollView che punterà a quello verticale o orizzontale a seconda dell'orientamento
+    UIPageControl* pc;  //PageControl che punterà a quello verticale o orizzontale a seconda dell'orientamento
+    
+    UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
+    
+    if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation == UIDeviceOrientationPortraitUpsideDown))
+    {
+        sv = exerciseImgScrollView;
+        pc = exerciseImgPageControl;
+    }
+    else
+    {
+        sv =  horiz_exerciseImgScrollView;
+        pc = horiz_exerciseImgPageControl;
+    }*/
+    
     
     [exerciseImgScrollView setContentSize:CGSizeMake(((WIDTH*NUM_PHOTOS)+(GAP*2*NUM_PHOTOS)), HEIGHT)];
+    //[horiz_exerciseImgScrollView setContentSize:CGSizeMake(((WIDTH*NUM_PHOTOS)+(GAP*2*NUM_PHOTOS)), HEIGHT)];
     
     for (int i=0; i<= NUM_PHOTOS-1; i++)
     {
@@ -52,16 +108,25 @@
         UIImage* exerciseImage = [UIImage imageNamed:medias.mediaPath];
         DLog(@"IMG: %@", medias.mediaPath);
         UIImageView* exerciseImageView = [[UIImageView alloc] initWithImage:exerciseImage];
-        //se si tratta di un Ipad è permessa la rotazione in orizzontale e devo ridimensionare anche la UIImageView
-        if (isIpad)
-            exerciseImageView.autoresizingMask= UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin ;//| UIViewAutoresizingFlexibleTopMargin ;
+        //UIImageView* horiz_ImageView = [[UIImageView alloc] initWithImage:exerciseImage];
         
-        [exerciseImageView setFrame:CGRectMake(x, Y, WIDTH, HEIGHT)];
+        [exerciseImageView setFrame:CGRectMake(x, y, WIDTH, HEIGHT)];
+        //[horiz_ImageView setFrame:CGRectMake(x, y, WIDTH, HEIGHT)];
         [exerciseImgScrollView addSubview:exerciseImageView];
-        x = x + WIDTH + (2*GAP);
+        //[horiz_exerciseImgScrollView addSubview:horiz_ImageView];
+        x = x + WIDTH + (2*GAP); //modificare!!
     }
     exerciseImgPageControl.numberOfPages = NUM_PHOTOS;
     exerciseImgPageControl.currentPage = 0;
+    
+    //horiz_exerciseImgPageControl.numberOfPages = NUM_PHOTOS;
+    //horiz_exerciseImgPageControl.currentPage = 0;
+    
+    DLog(@"Num di Pagine VERT: %d ", exerciseImgPageControl.numberOfPages);
+    //DLog(@"Num di Pagine Horiz: %d ", horiz_exerciseImgPageControl.numberOfPages);
+    
+    DLog(@"ScrollView VERT- bounds: %d ", exerciseImgScrollView.bounds);
+    //DLog(@"ScrollView HORIZ - bounds: %d ", horiz_exerciseImgScrollView.bounds);
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -71,6 +136,11 @@
     exerciseNameLabel.text = ExerciseName;
     exerciseRepChargeLabel.text = ExerciseRepCharge;
     exerciseInstructionsTextView.text = ExerciseInstructions;
+    
+    //valorizzo le variabili della vista orizzontale
+    //horiz_exerciseNameLabel.text = ExerciseName;
+    //horiz_exerciseRepChargeLabel.text = ExerciseRepCharge;
+    //horiz_exerciseInstructionsTextView.text = ExerciseInstructions;
     
 }
 
@@ -95,23 +165,96 @@
 {
     [UIView beginAnimations:@"AnimazioneMoltoFiga" context:NULL];
     [UIView setAnimationDuration:0.3f];
-    verticalContainer.alpha = 0.0f;
-    horizontalContainer.alpha = 0.0f;
+    /*verticalContainer.alpha = 0.0f;
+    horizontalContainer.alpha = 0.0f;*/
+    self.view.alpha = 0.0f;
     [UIView commitAnimations];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     //controllo quale sia l'orientamento del dispositivo e, sulla base di quello, rendo visibile uno dei due container
-    UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
+    NSString* deviceModel = [UIDevice currentDevice].model;
+    BOOL isIpad = [deviceModel containsString:@"iPad"];
+    
+    if (isIpad)
+    {
+        UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
+        if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation == UIDeviceOrientationPortraitUpsideDown))
+        {
+            //TITOLO
+            [exerciseNameLabel setFrame: CGRectMake(12,74,744,72)];
+            [exerciseNameLabel setFont:[UIFont fontWithName:@"Arial Rounded MT Bold" size:24.0f]];
+            
+            //CARICO/PAUSA
+            [exerciseRepChargeLabel setFrame: CGRectMake(256,662,256,21)];
+            [exerciseRepChargeLabel setFont:[UIFont fontWithName:@"Helvetica Neue Bold" size:19.0f]];
+            
+            //ISTRUZIONI
+            [exerciseInstructionsTextView setFrame: CGRectMake(81,725,606,291)];
+            [exerciseInstructionsTextView setFont:[UIFont fontWithName:@"System" size:18.0f]];
+            
+            //SCROLLVIEW
+            [exerciseImgScrollView setFrame: CGRectMake(0,161,768,433)];
+            
+            //PAGECONTROL
+            [exerciseImgPageControl setFrame: CGRectMake(365,597,56,37)];
+
+            
+        }
+        else //orizzontale
+        {
+            //TITOLO
+            [exerciseNameLabel setFrame: CGRectMake(54, 111, 917, 72)];
+            [exerciseNameLabel setFont:[UIFont fontWithName:@"Arial Rounded MT Bold" size:29.0f]];
+            
+            //CARICO/PAUSA
+            [exerciseRepChargeLabel setFrame: CGRectMake(779,247,124,30)];
+            [exerciseRepChargeLabel setFont:[UIFont fontWithName:@"Helvetica Neue Bold" size:21.0f]];
+            
+            //ISTRUZIONI
+            [exerciseInstructionsTextView setFrame: CGRectMake(683,303,316,317)];
+            [exerciseInstructionsTextView setFont:[UIFont fontWithName:@"System" size:19.0f]];
+            
+            //SCROLLVIEW
+            [exerciseImgScrollView setFrame: CGRectMake(14,247,654,373)];
+            
+            //PAGECONTROL
+            [exerciseImgPageControl setFrame: CGRectMake(320,619,39,37)];
+        }
+    }
+    else //non è un Ipad
+    {
+        //TITOLO
+        [exerciseNameLabel setFrame: CGRectMake(8,66,304,56)];
+        [exerciseNameLabel setFont:[UIFont fontWithName:@"Arial Rounded MT Bold" size:18.0f]];
+        
+        //CARICO/PAUSA
+        [exerciseRepChargeLabel setFrame: CGRectMake(81,314,159,21)];
+        [exerciseRepChargeLabel setFont:[UIFont fontWithName:@"Helvetica Neue Bold" size:18.0f]];
+        
+        //ISTRUZIONI
+        [exerciseInstructionsTextView setFrame: CGRectMake(24,341,272,212)];
+        [exerciseInstructionsTextView setFont:[UIFont fontWithName:@"System" size:14.0f]];
+        
+        //SCROLLVIEW
+        [exerciseImgScrollView setFrame: CGRectMake(0,127,320,150)];
+        
+        //PAGECONTROL
+        [exerciseImgPageControl setFrame: CGRectMake(132,278,56,37)];
+    }
+    
     
     [UIView beginAnimations:@"AnimazioneMoltoFiga" context:NULL];
     [UIView setAnimationDuration:0.3f];
-    if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation == UIDeviceOrientationPortraitUpsideDown))
+    self.view.alpha = 1.0f;
+    
+    /*if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation == UIDeviceOrientationPortraitUpsideDown))
         verticalContainer.alpha = 1.0f;
     else
         horizontalContainer.alpha = 1.0f; //proprietà della view: 0 non visibile, 1 completamente visibile
-    
+    */
+     
     [UIView commitAnimations];
 }
 
