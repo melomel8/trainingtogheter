@@ -176,14 +176,14 @@
 			children = (
 				0CBFB4271A14BD94007DCC1E /* Podfile */,
 				0CBFB41A1A14B4A1007DCC1E /* AppDelegate.h */,
+				48EB637C1A2F6CD000D344A1 /* GeneralViewController.h */,
 				0CBFB41B1A14B4A1007DCC1E /* AppDelegate.m */,
+				48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */,
 				0CBFB41D1A14B4A1007DCC1E /* main.m */,
 				48EB63781A2C871100D344A1 /* PrefixHeader.pch */,
 				0CBFB41C1A14B4A1007DCC1E /* Info.plist */,
 				0CBFB4251A14B561007DCC1E /* storage.sqlite */,
 				0CEB9D141A1A58B800E397A4 /* Localizable.strings */,
-				48EB637C1A2F6CD000D344A1 /* GeneralViewController.h */,
-				48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -192,19 +192,19 @@
 			isa = PBXGroup;
 			children = (
 				0CA9B0561A1CEBB6002711C6 /* DBManager.h */,
-				0CA9B0571A1CEBB6002711C6 /* DBManager.m */,
 				0CA9B0591A1CECD0002711C6 /* DBUtil.h */,
-				0CA9B05A1A1CECD0002711C6 /* DBUtil.m */,
 				0CBFB42E1A14F6CB007DCC1E /* Difficulty.h */,
-				0CBFB42F1A14F6CB007DCC1E /* Difficulty.m */,
 				0CBFB4311A14FE9F007DCC1E /* Exercise.h */,
-				0CBFB4321A14FE9F007DCC1E /* Exercise.m */,
-				0CBFB4291A14CB46007DCC1E /* Program.h */,
-				0CBFB42A1A14CB46007DCC1E /* Program.m */,
-				48998DBE1A1E4F24001C89F2 /* Training.h */,
-				48998DBF1A1E4F24001C89F2 /* Training.m */,
 				48EB63791A2CBA2700D344A1 /* Media.h */,
+				0CBFB4291A14CB46007DCC1E /* Program.h */,
+				48998DBE1A1E4F24001C89F2 /* Training.h */,
+				0CA9B0571A1CEBB6002711C6 /* DBManager.m */,
+				0CA9B05A1A1CECD0002711C6 /* DBUtil.m */,
+				0CBFB42F1A14F6CB007DCC1E /* Difficulty.m */,
+				0CBFB4321A14FE9F007DCC1E /* Exercise.m */,
 				48EB637A1A2CBA2700D344A1 /* Media.m */,
+				0CBFB42A1A14CB46007DCC1E /* Program.m */,
+				48998DBF1A1E4F24001C89F2 /* Training.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -219,12 +219,12 @@
 		0CBFB4231A14B4F4007DCC1E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */,
-				0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */,
-				48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */,
-				48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */,
 				489177931A27385D00FBDB91 /* ExerciseDetailViewController.h */,
+				0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */,
+				48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */,
 				489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */,
+				0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */,
+				48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -232,16 +232,16 @@
 		0CBFB4241A14B4F4007DCC1E /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				489177981A27391100FBDB91 /* ExerciseDetailViewController.xib */,
-				0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */,
-				48998DBA1A1E393F001C89F2 /* ProgramDetailViewController.xib */,
-				0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */,
-				48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */,
-				48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */,
-				48EB63831A309E1600D344A1 /* ProgramDetailViewController_iPad.xib */,
 				48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */,
-				48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */,
+				0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */,
+				48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */,
+				489177981A27391100FBDB91 /* ExerciseDetailViewController.xib */,
 				48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */,
+				0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */,
+				48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */,
+				48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */,
+				48EB63831A309E1600D344A1 /* ProgramDetailViewController_iPad.xib */,
+				48998DBA1A1E393F001C89F2 /* ProgramDetailViewController.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -315,6 +315,7 @@
 				TargetAttributes = {
 					0CBFB3E41A14AF0E007DCC1E = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = Z4E4J2KFXB;
 					};
 					0CBFB3FD1A14AF0E007DCC1E = {
 						CreatedOnToolsVersion = 6.1;
@@ -541,6 +542,7 @@
 			baseConfigurationReference = BBBAD250094C1EC1F6701F0C /* Pods-TrainingTogether.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/TrainingTogether/SupportingFiles/PrefixHeader.pch;
@@ -560,6 +562,7 @@
 			baseConfigurationReference = 567B388E4E17264F73FF658F /* Pods-TrainingTogether.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/TrainingTogether/SupportingFiles/PrefixHeader.pch;
