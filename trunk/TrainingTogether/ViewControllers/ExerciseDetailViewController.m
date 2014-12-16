@@ -39,13 +39,7 @@
     //TODO controllare che esista almeno una foto?
     int   NUM_PHOTOS    = exerciseArray.count;
     
-    //imposto le dimensioni in base a dispositivo e orientamento
-    /*float HEIGHT        = isIpad ? HEIGHT_IPAD : HEIGHT_IPHONE;
-    float WIDTH         = isIpad ? WIDTH_IPAD : WIDTH_IPHONE;
-    float GAP           = isIpad ? GAP_IPAD : GAP_IPHONE;
-    float x             = GAP;
-    float Y             = 0;*/
-    
+
     float HEIGHT, WIDTH, GAP, x, y;
     
     if (isIpad)
@@ -81,25 +75,7 @@
     
     DLog(@"Num record in exerciseArray: %d ", NUM_PHOTOS);
     
-   /* UIScrollView* sv;   //ScrollView che punterà a quello verticale o orizzontale a seconda dell'orientamento
-    UIPageControl* pc;  //PageControl che punterà a quello verticale o orizzontale a seconda dell'orientamento
-    
-    UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
-    
-    if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation == UIDeviceOrientationPortraitUpsideDown))
-    {
-        sv = exerciseImgScrollView;
-        pc = exerciseImgPageControl;
-    }
-    else
-    {
-        sv =  horiz_exerciseImgScrollView;
-        pc = horiz_exerciseImgPageControl;
-    }*/
-    
-    
     [exerciseImgScrollView setContentSize:CGSizeMake(((WIDTH*NUM_PHOTOS)+(GAP*2*NUM_PHOTOS)), HEIGHT)];
-    //[horiz_exerciseImgScrollView setContentSize:CGSizeMake(((WIDTH*NUM_PHOTOS)+(GAP*2*NUM_PHOTOS)), HEIGHT)];
     
     for (int i=0; i<= NUM_PHOTOS-1; i++)
     {
@@ -108,8 +84,7 @@
         UIImage* exerciseImage = [UIImage imageNamed:medias.mediaPath];
         DLog(@"IMG: %@", medias.mediaPath);
         UIImageView* exerciseImageView = [[UIImageView alloc] initWithImage:exerciseImage];
-        //UIImageView* horiz_ImageView = [[UIImageView alloc] initWithImage:exerciseImage];
-        
+      
         [exerciseImageView setFrame:CGRectMake(x, y, WIDTH, HEIGHT)];
         //[horiz_ImageView setFrame:CGRectMake(x, y, WIDTH, HEIGHT)];
         [exerciseImgScrollView addSubview:exerciseImageView];
