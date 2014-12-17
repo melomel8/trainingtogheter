@@ -23,10 +23,10 @@
 		0CBFB4301A14F6CB007DCC1E /* Difficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB42F1A14F6CB007DCC1E /* Difficulty.m */; };
 		0CBFB4331A14FE9F007DCC1E /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4321A14FE9F007DCC1E /* Exercise.m */; };
 		0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB9D141A1A58B800E397A4 /* Localizable.strings */; };
+		482AFC1C1A40563400B15119 /* ProgramDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482AFC1B1A40563400B15119 /* ProgramDetailViewController.xib */; };
 		489177961A27385D00FBDB91 /* ExerciseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */; };
 		489177991A27391100FBDB91 /* ExerciseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489177981A27391100FBDB91 /* ExerciseDetailViewController.xib */; };
 		48998DB81A1E38F9001C89F2 /* ProgramDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */; };
-		48998DBB1A1E393F001C89F2 /* ProgramDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48998DBA1A1E393F001C89F2 /* ProgramDetailViewController.xib */; };
 		48998DBD1A1E4741001C89F2 /* ProgramDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */; };
 		48998DC01A1E4F24001C89F2 /* Training.m in Sources */ = {isa = PBXBuildFile; fileRef = 48998DBF1A1E4F24001C89F2 /* Training.m */; };
 		48B66CA01A37163F00E28791 /* ProgramDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B66C9F1A37163F00E28791 /* ProgramDetailViewController_iPad.xib */; };
@@ -78,12 +78,12 @@
 		0CBFB4321A14FE9F007DCC1E /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
 		0CEB9D131A1A58B800E397A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CEB9D151A1A58C400E397A4 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		482AFC1B1A40563400B15119 /* ProgramDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController.xib; sourceTree = "<group>"; };
 		489177931A27385D00FBDB91 /* ExerciseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ExerciseDetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDetailViewController.m; sourceTree = "<group>"; };
 		489177981A27391100FBDB91 /* ExerciseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseDetailViewController.xib; sourceTree = "<group>"; };
 		48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ProgramDetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ProgramDetailViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		48998DBA1A1E393F001C89F2 /* ProgramDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController.xib; sourceTree = "<group>"; };
 		48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailCell.xib; sourceTree = "<group>"; };
 		48998DBE1A1E4F24001C89F2 /* Training.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Training.h; sourceTree = "<group>"; };
 		48998DBF1A1E4F24001C89F2 /* Training.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Training.m; sourceTree = "<group>"; };
@@ -192,18 +192,18 @@
 			isa = PBXGroup;
 			children = (
 				0CA9B0561A1CEBB6002711C6 /* DBManager.h */,
-				0CA9B0591A1CECD0002711C6 /* DBUtil.h */,
-				0CBFB42E1A14F6CB007DCC1E /* Difficulty.h */,
-				0CBFB4311A14FE9F007DCC1E /* Exercise.h */,
-				48EB63791A2CBA2700D344A1 /* Media.h */,
-				0CBFB4291A14CB46007DCC1E /* Program.h */,
-				48998DBE1A1E4F24001C89F2 /* Training.h */,
 				0CA9B0571A1CEBB6002711C6 /* DBManager.m */,
+				0CA9B0591A1CECD0002711C6 /* DBUtil.h */,
 				0CA9B05A1A1CECD0002711C6 /* DBUtil.m */,
+				0CBFB42E1A14F6CB007DCC1E /* Difficulty.h */,
 				0CBFB42F1A14F6CB007DCC1E /* Difficulty.m */,
+				0CBFB4311A14FE9F007DCC1E /* Exercise.h */,
 				0CBFB4321A14FE9F007DCC1E /* Exercise.m */,
+				48EB63791A2CBA2700D344A1 /* Media.h */,
 				48EB637A1A2CBA2700D344A1 /* Media.m */,
+				0CBFB4291A14CB46007DCC1E /* Program.h */,
 				0CBFB42A1A14CB46007DCC1E /* Program.m */,
+				48998DBE1A1E4F24001C89F2 /* Training.h */,
 				48998DBF1A1E4F24001C89F2 /* Training.m */,
 			);
 			path = Classes;
@@ -220,10 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				489177931A27385D00FBDB91 /* ExerciseDetailViewController.h */,
-				0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */,
-				48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */,
 				489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */,
+				0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */,
 				0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */,
+				48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */,
 				48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */,
 			);
 			path = ViewControllers;
@@ -232,6 +232,7 @@
 		0CBFB4241A14B4F4007DCC1E /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				482AFC1B1A40563400B15119 /* ProgramDetailViewController.xib */,
 				48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */,
 				0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */,
 				48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */,
@@ -240,11 +241,7 @@
 				0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */,
 				48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */,
 				48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */,
-				48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */,
-				48EB63891A31F59D00D344A1 /* LevelSelectViewController_iPad.xib */,
 				48B66C9F1A37163F00E28791 /* ProgramDetailViewController_iPad.xib */,
-				48EB63851A309E4600D344A1 /* DifficultyCell_iPad.xib */,
-				48EB63871A309E6300D344A1 /* ProgramDetailCell_iPad.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -352,7 +349,6 @@
 			files = (
 				0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */,
 				0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */,
-				48998DBB1A1E393F001C89F2 /* ProgramDetailViewController.xib in Resources */,
 				0CBFB4261A14B561007DCC1E /* storage.sqlite in Resources */,
 				48EB63861A309E4600D344A1 /* DifficultyCell_iPad.xib in Resources */,
 				0CBFB3F61A14AF0E007DCC1E /* Images.xcassets in Resources */,
@@ -360,6 +356,7 @@
 				489177991A27391100FBDB91 /* ExerciseDetailViewController.xib in Resources */,
 				48EB638A1A31F59D00D344A1 /* LevelSelectViewController_iPad.xib in Resources */,
 				48EB63801A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib in Resources */,
+				482AFC1C1A40563400B15119 /* ProgramDetailViewController.xib in Resources */,
 				48EB63881A309E6300D344A1 /* ProgramDetailCell_iPad.xib in Resources */,
 				0CBFB4281A14BD94007DCC1E /* Podfile in Resources */,
 				0CBFB41F1A14B4A1007DCC1E /* Info.plist in Resources */,

@@ -16,19 +16,13 @@
     NSString*   ExerciseInstructions;
     NSArray*    exerciseArray;
     
-    IBOutlet    UIView*         verticalContainer;
+    IBOutlet    UIView*         viewContainer;
     IBOutlet    UILabel*        exerciseNameLabel;
     IBOutlet    UIScrollView*   exerciseImgScrollView;
     IBOutlet    UIPageControl*  exerciseImgPageControl;
     IBOutlet    UILabel*        exerciseRepChargeLabel;
     IBOutlet    UITextView*     exerciseInstructionsTextView;
     
-    IBOutlet    UIView*         horizontalContainer;
-    IBOutlet    UILabel*        horiz_exerciseNameLabel;
-    IBOutlet    UIScrollView*   horiz_exerciseImgScrollView;
-    IBOutlet    UIPageControl*  horiz_exerciseImgPageControl;
-    IBOutlet    UILabel*        horiz_exerciseRepChargeLabel;
-    IBOutlet    UITextView*     horiz_exerciseInstructionsTextView;
 }
 
 @property (nonatomic, assign) NSInteger ExerciseId;

@@ -102,6 +102,7 @@
     DLog(@"REP_CHARGE: %@ ", exerciseVC.ExerciseInstructions);
     
     [self.navigationController pushViewController:exerciseVC animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
 }
 
