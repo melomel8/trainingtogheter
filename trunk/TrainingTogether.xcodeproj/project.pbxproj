@@ -24,6 +24,7 @@
 		0CBFB4331A14FE9F007DCC1E /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4321A14FE9F007DCC1E /* Exercise.m */; };
 		0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB9D141A1A58B800E397A4 /* Localizable.strings */; };
 		482AFC1C1A40563400B15119 /* ProgramDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482AFC1B1A40563400B15119 /* ProgramDetailViewController.xib */; };
+		487F16171A432A19007907D9 /* ZoomableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 487F16161A432A19007907D9 /* ZoomableView.m */; };
 		489177961A27385D00FBDB91 /* ExerciseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */; };
 		489177991A27391100FBDB91 /* ExerciseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 489177981A27391100FBDB91 /* ExerciseDetailViewController.xib */; };
 		48998DB81A1E38F9001C89F2 /* ProgramDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */; };
@@ -79,6 +80,8 @@
 		0CEB9D131A1A58B800E397A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CEB9D151A1A58C400E397A4 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		482AFC1B1A40563400B15119 /* ProgramDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController.xib; sourceTree = "<group>"; };
+		487F16151A432A19007907D9 /* ZoomableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomableView.h; sourceTree = "<group>"; };
+		487F16161A432A19007907D9 /* ZoomableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomableView.m; sourceTree = "<group>"; };
 		489177931A27385D00FBDB91 /* ExerciseDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ExerciseDetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDetailViewController.m; sourceTree = "<group>"; };
 		489177981A27391100FBDB91 /* ExerciseDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExerciseDetailViewController.xib; sourceTree = "<group>"; };
@@ -205,6 +208,8 @@
 				0CBFB42A1A14CB46007DCC1E /* Program.m */,
 				48998DBE1A1E4F24001C89F2 /* Training.h */,
 				48998DBF1A1E4F24001C89F2 /* Training.m */,
+				487F16151A432A19007907D9 /* ZoomableView.h */,
+				487F16161A432A19007907D9 /* ZoomableView.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 				48998DC01A1E4F24001C89F2 /* Training.m in Sources */,
 				0CBFB4301A14F6CB007DCC1E /* Difficulty.m in Sources */,
 				0CBFB41E1A14B4A1007DCC1E /* AppDelegate.m in Sources */,
+				487F16171A432A19007907D9 /* ZoomableView.m in Sources */,
 				0CA9B05B1A1CECD0002711C6 /* DBUtil.m in Sources */,
 				48998DB81A1E38F9001C89F2 /* ProgramDetailViewController.m in Sources */,
 			);

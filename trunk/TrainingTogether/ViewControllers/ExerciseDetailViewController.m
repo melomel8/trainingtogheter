@@ -26,7 +26,7 @@
 @interface ExerciseDetailViewController ()
 
 - (void)drawView;
-- (void)imageTapped:(id)sender;
+- (void)imageTapped:(UITapGestureRecognizer*)sender;
 
 @end
 
@@ -37,7 +37,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     exerciseArray = [DBManager getMediasForExercise:ExerciseId];
-    int   NUM_PHOTOS    = exerciseArray.count;
+    int NUM_PHOTOS = exerciseArray.count;
     [self drawView];
     exerciseImgPageControl.numberOfPages = NUM_PHOTOS;
     exerciseImgPageControl.currentPage = 0;
@@ -60,7 +60,7 @@
     NSString* deviceModel = [UIDevice currentDevice].model;
     BOOL isIpad = [deviceModel containsString:@"iPad"];
     //TODO controllare che esista almeno una foto?
-    int   NUM_PHOTOS    = exerciseArray.count;
+    int NUM_PHOTOS = exerciseArray.count;
     float HEIGHT, WIDTH, GAP, x, y;
     
     if (isIpad)
@@ -177,9 +177,12 @@
     
 }
 
-- (void)imageTapped:(id)sender
+- (void)imageTapped:(UITapGestureRecognizer*)sender
 {
     DLog(@"HO TAPPATOOOO!!!");
+    UIImageView* tappedView = (UIImageView*)sender.view;
+    DLog(@"LA view tappata è: %d", tappedView.image);
+    
 }
 
 - (void)didReceiveMemoryWarning {
