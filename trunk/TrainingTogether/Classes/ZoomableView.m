@@ -22,7 +22,8 @@
         //visualizzo gli oggetti creati
         [self addSubview:myScrollView];
         [myScrollView addSubview:myImageView];
-        [myImageView addSubview:imageTapped];
+         myImageView.contentMode = UIViewContentModeScaleAspectFit;
+        [myImageView setImage:imageTapped];
         
     }
     

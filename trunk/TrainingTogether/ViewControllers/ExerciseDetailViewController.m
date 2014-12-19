@@ -8,6 +8,7 @@
 
 #import "ExerciseDetailViewController.h"
 #import "DBManager.h"
+#import "ZoomableView.h"
 
 #ifndef EXERCISE_DETAIL_VIEW_CONTROLLER_CONSTANTS
 #define HEIGHT_IPHONE 150.0f
@@ -21,6 +22,8 @@
 #define HEIGHT_IPAD_HORIZ 373.0f
 #define WIDTH_IPAD_HORIZ  497.0f
 #define GAP_IPAD_HORIZ 0.0f
+
+#define ZOOM_VIEW_MARGIN 30.0f
 #endif
 
 @interface ExerciseDetailViewController ()
@@ -66,8 +69,10 @@
     if (isIpad)
     {
         
-        UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
-        if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation== UIDeviceOrientationPortraitUpsideDown))
+        //UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
+        UIInterfaceOrientation myAppOrientation =   [[UIApplication sharedApplication ] statusBarOrientation];
+        //if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation== UIDeviceOrientationPortraitUpsideDown))
+        if ((myAppOrientation == UIDeviceOrientationPortrait) || (myAppOrientation== UIDeviceOrientationPortraitUpsideDown))
         {
             HEIGHT = HEIGHT_IPAD;
             WIDTH = WIDTH_IPAD;
@@ -181,7 +186,13 @@
 {
     DLog(@"HO TAPPATOOOO!!!");
     UIImageView* tappedView = (UIImageView*)sender.view;
-    DLog(@"LA view tappata è: %d", tappedView.image);
+    CGFloat statusBarHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+    CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
+    CGFloat viewY = self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight;
+    DLog(@"viewY è %f", viewY);
+    ZoomableView* zommedView = [[ZoomableView alloc] initWithImage:tappedView.image andFrame:CGRectMake((self.view.frame.origin.x + ZOOM_VIEW_MARGIN), (self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight + navigationBarHeight), (self.view.frame.size.width - (2*ZOOM_VIEW_MARGIN)), (self.view.frame.size.height - (2*ZOOM_VIEW_MARGIN+statusBarHeight + navigationBarHeight)))];
+    
+    [self.view addSubview:zommedView];
     
 }
 
