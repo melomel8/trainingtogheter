@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZoomableView : UIView
+@interface ZoomableView : UIView <UIScrollViewDelegate>
 
 /*!
  Costruttore che inizializza la vista zoomabile

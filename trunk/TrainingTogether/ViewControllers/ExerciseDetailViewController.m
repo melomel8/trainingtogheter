@@ -30,10 +30,13 @@
 
 - (void)drawView;
 - (void)imageTapped:(UITapGestureRecognizer*)sender;
+- (void)notImageTapped:(UITapGestureRecognizer*)sender;
 
 @end
 
 @implementation ExerciseDetailViewController
+
+ZoomableView* zommedView;
 
 @synthesize ExerciseId, ExerciseName, ExerciseRepCharge, ExerciseInstructions;
 
@@ -45,6 +48,10 @@
     exerciseImgPageControl.numberOfPages = NUM_PHOTOS;
     exerciseImgPageControl.currentPage = 0;
     
+    //Aggiungo il TapGR per riconoscere il tap fuori dalla foto tappata
+    UITapGestureRecognizer* tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(notImageTapped:)];
+    [self.view addGestureRecognizer:tapGR];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -190,10 +197,18 @@
     CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
     CGFloat viewY = self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight;
     DLog(@"viewY è %f", viewY);
-    ZoomableView* zommedView = [[ZoomableView alloc] initWithImage:tappedView.image andFrame:CGRectMake((self.view.frame.origin.x + ZOOM_VIEW_MARGIN), (self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight + navigationBarHeight), (self.view.frame.size.width - (2*ZOOM_VIEW_MARGIN)), (self.view.frame.size.height - (2*ZOOM_VIEW_MARGIN+statusBarHeight + navigationBarHeight)))];
+    zommedView = [[ZoomableView alloc] initWithImage:tappedView.image andFrame:CGRectMake((self.view.frame.origin.x + ZOOM_VIEW_MARGIN), (self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight + navigationBarHeight), (self.view.frame.size.width - (2*ZOOM_VIEW_MARGIN)), (self.view.frame.size.height - (2*ZOOM_VIEW_MARGIN+statusBarHeight + navigationBarHeight)))];
     
     [self.view addSubview:zommedView];
     
+}
+
+-(void)notImageTapped:(UITapGestureRecognizer *)sender
+{
+
+    DLog(@"HO tappato fuori dalla foto");
+    [zommedView removeFromSuperview];
+
 }
 
 - (void)didReceiveMemoryWarning {
