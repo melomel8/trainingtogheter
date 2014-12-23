@@ -22,6 +22,7 @@
     IBOutlet    UIPageControl*  exerciseImgPageControl;
     IBOutlet    UILabel*        exerciseRepChargeLabel;
     IBOutlet    UITextView*     exerciseInstructionsTextView;
+    IBOutlet    UIView*         viewGray;
     
 }
 

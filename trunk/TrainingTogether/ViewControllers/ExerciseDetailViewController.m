@@ -191,23 +191,39 @@ ZoomableView* zommedView;
 
 - (void)imageTapped:(UITapGestureRecognizer*)sender
 {
-    DLog(@"HO TAPPATOOOO!!!");
+    DLog(@"***HO TAPPATOOOO!!!***");
     UIImageView* tappedView = (UIImageView*)sender.view;
     CGFloat statusBarHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
     CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
     CGFloat viewY = self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight;
     DLog(@"viewY è %f", viewY);
     zommedView = [[ZoomableView alloc] initWithImage:tappedView.image andFrame:CGRectMake((self.view.frame.origin.x + ZOOM_VIEW_MARGIN), (self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight + navigationBarHeight), (self.view.frame.size.width - (2*ZOOM_VIEW_MARGIN)), (self.view.frame.size.height - (2*ZOOM_VIEW_MARGIN+statusBarHeight + navigationBarHeight)))];
+   
+    //self.navigationController.navigationBar.topItem.leftBarButtonItem.enabled = NO;
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     
+    
+    [UIView beginAnimations:@"AnimazioneAperturaView" context:NULL];
+    [UIView setAnimationDuration:0.6f];
     [self.view addSubview:zommedView];
+    [zommedView setAlpha:1.0];
+    [viewGray setAlpha:0.8];
+    [UIView commitAnimations];
     
 }
 
 -(void)notImageTapped:(UITapGestureRecognizer *)sender
 {
 
-    DLog(@"HO tappato fuori dalla foto");
+    DLog(@"***HO tappato fuori dalla foto***");
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    [UIView beginAnimations:@"AnimazioneAperturaView" context:NULL];
+    [UIView setAnimationDuration:0.6f];
+    [zommedView setAlpha:0.0f];
     [zommedView removeFromSuperview];
+    [viewGray setAlpha:0];
+    [UIView commitAnimations];
 
 }
 
@@ -233,7 +249,6 @@ ZoomableView* zommedView;
 {
     [UIView beginAnimations:@"AnimazioneMoltoFiga" context:NULL];
     [UIView setAnimationDuration:0.3f];
-    //self.view.alpha = 0.0f;
     viewContainer.alpha = 0.0f;
     [UIView commitAnimations];
 }

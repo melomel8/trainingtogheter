@@ -10,7 +10,7 @@
 
 @interface ZoomableView()
 
--(void) dismissImageView;
+-(void) dismissImageView:(UIButton*)button;
 
 @end
 
@@ -28,7 +28,9 @@
         //visualizzo gli oggetti creati
         [self addSubview:myScrollView];
         [myScrollView addSubview:myImageView];
-         myImageView.contentMode = UIViewContentModeScaleAspectFit; //per mantenere le proporzioni dell'immagine
+        //[myScrollView setBackgroundColor:[UIColor blackColor]];
+        [myScrollView setBackgroundColor:[UIColor clearColor]];
+        myImageView.contentMode = UIViewContentModeScaleAspectFit; //per mantenere le proporzioni dell'immagine
          self.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
          myScrollView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
          myImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth; // in modo che, anche se ruotata, si adatti alla view
@@ -39,10 +41,16 @@
         myScrollView.delegate = self;
         
         //aggiungo il bottone di chiusura della view
-        UIButton* btnDismissImageView = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 100, 100)];
-        [btnDismissImageView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [btnDismissImageView setTitle:@"x" forState:UIControlStateNormal];
+        UIButton *btnDismissImageView = [UIButton buttonWithType:UIButtonTypeSystem];
         [btnDismissImageView addTarget:self action:@selector(dismissImageView:) forControlEvents:UIControlEventTouchUpInside];
+        [btnDismissImageView setTitle:@"X" forState:UIControlStateNormal];
+        [btnDismissImageView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [btnDismissImageView setBackgroundColor:[UIColor darkGrayColor]];
+        btnDismissImageView.frame = CGRectMake(myImageView.frame.origin.x, myImageView.frame.origin.y, 20.0, 20.0);
+        [btnDismissImageView setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        //btnDismissImageView.titleLabel.font= [UIFont fontWithName:@"HelveticaNeue-Bold" size:18.0f];
+        btnDismissImageView.titleLabel.font= [UIFont fontWithName:@"ArialRoundedMTBold" size:20.0f];
+        //btnDismissImageView.autoresizingMask =
         [self addSubview:btnDismissImageView];
         
         
@@ -54,8 +62,9 @@
 }
 
 
--(void)dismissImageView
+-(void)dismissImageView:(UIButton*)button
 {
+    DLog(@"SONO DENTRO AL DISMISS");
     self.removeFromSuperview;
 }
 
