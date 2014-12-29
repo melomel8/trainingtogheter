@@ -49,6 +49,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Avvio la sessione su TestFlight
+    [TestFlight takeOff:@"6148fd77-6f0d-4909-9741-8da450442f88"];
+    
     [self createEditableCopyOfDb];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     

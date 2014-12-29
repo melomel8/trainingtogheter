@@ -61,7 +61,7 @@ ZoomableView* zommedView;
     [self.navigationItem setTitle:NSLocalizedString(@"exerciseDetailTitle", @"Exercise Detail")];
     exerciseNameLabel.text = ExerciseName;
     exerciseRepChargeLabel.text = ExerciseRepCharge;
-    exerciseInstructionsTextView.text = ExerciseInstructions;
+    exerciseInstructionsTextView.text = NSLocalizedString(ExerciseInstructions, ExerciseInstructions);
     
 }
 

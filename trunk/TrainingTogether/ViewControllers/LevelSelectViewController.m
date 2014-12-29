@@ -33,7 +33,6 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
     [self.navigationItem setTitle:NSLocalizedString(@"levelSelectionTitle", @"Select Your Level")];
 }
 
