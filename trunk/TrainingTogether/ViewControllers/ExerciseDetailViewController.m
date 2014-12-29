@@ -31,6 +31,7 @@
 - (void)drawView;
 - (void)imageTapped:(UITapGestureRecognizer*)sender;
 - (void)notImageTapped:(UITapGestureRecognizer*)sender;
+- (void)animationEnded;
 
 @end
 
@@ -203,11 +204,13 @@ ZoomableView* zommedView;
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
     
-    [UIView beginAnimations:@"AnimazioneAperturaView" context:NULL];
-    [UIView setAnimationDuration:0.6f];
     [self.view addSubview:zommedView];
+    [zommedView setAlpha:0.0];
+    [UIView beginAnimations:@"AnimazioneAperturaView" context:NULL];
+    [UIView setAnimationDuration:0.4f];
     [zommedView setAlpha:1.0];
     [viewGray setAlpha:0.8];
+    [viewGrayIpad setAlpha:0.8];
     [UIView commitAnimations];
     
 }
@@ -218,13 +221,20 @@ ZoomableView* zommedView;
     DLog(@"***HO tappato fuori dalla foto***");
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
-    [UIView beginAnimations:@"AnimazioneAperturaView" context:NULL];
-    [UIView setAnimationDuration:0.6f];
+    [UIView beginAnimations:@"AnimazioneChiusuraView" context:NULL];
+    [UIView setAnimationDuration:0.4f];
+    [UIView setAnimationDelegate:self];
+    [UIView setAnimationDidStopSelector:@selector(animationEnded)];
     [zommedView setAlpha:0.0f];
-    [zommedView removeFromSuperview];
     [viewGray setAlpha:0];
+    [viewGrayIpad setAlpha:0];
     [UIView commitAnimations];
 
+}
+
+- (void)animationEnded
+{
+    [zommedView removeFromSuperview];
 }
 
 - (void)didReceiveMemoryWarning {

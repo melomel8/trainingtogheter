@@ -23,6 +23,7 @@
     IBOutlet    UILabel*        exerciseRepChargeLabel;
     IBOutlet    UITextView*     exerciseInstructionsTextView;
     IBOutlet    UIView*         viewGray;
+    IBOutlet    UIView*         viewGrayIpad;
     
 }
 

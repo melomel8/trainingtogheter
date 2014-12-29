@@ -40,19 +40,22 @@
         myScrollView.maximumZoomScale = 2;
         myScrollView.delegate = self;
         
+        [myScrollView setBounces:NO];
+        [myScrollView setDirectionalLockEnabled:YES];
+        myScrollView.showsVerticalScrollIndicator = NO;
+        myScrollView.showsHorizontalScrollIndicator = NO;
+        
         //aggiungo il bottone di chiusura della view
-        UIButton *btnDismissImageView = [UIButton buttonWithType:UIButtonTypeSystem];
+        /*UIButton *btnDismissImageView = [UIButton buttonWithType:UIButtonTypeSystem];
         [btnDismissImageView addTarget:self action:@selector(dismissImageView:) forControlEvents:UIControlEventTouchUpInside];
         [btnDismissImageView setTitle:@"X" forState:UIControlStateNormal];
         [btnDismissImageView setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [btnDismissImageView setBackgroundColor:[UIColor darkGrayColor]];
-        btnDismissImageView.frame = CGRectMake(myImageView.frame.origin.x, myImageView.frame.origin.y, 20.0, 20.0);
+        btnDismissImageView.frame = CGRectMake(myScrollView.frame.origin.x, myScrollView.frame.origin.y, 20.0, 20.0);
         [btnDismissImageView setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        //btnDismissImageView.titleLabel.font= [UIFont fontWithName:@"HelveticaNeue-Bold" size:18.0f];
         btnDismissImageView.titleLabel.font= [UIFont fontWithName:@"ArialRoundedMTBold" size:20.0f];
-        //btnDismissImageView.autoresizingMask =
         [self addSubview:btnDismissImageView];
-        
+        */
         
         [myImageView setImage:imageTapped];
         
