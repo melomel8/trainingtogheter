@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1B4F3F1A51745700109123 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B4F3B1A51745700109123 /* libTestFlight.a */; };
-		0C1B4F411A5174B200109123 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1B4F401A5174B200109123 /* libz.dylib */; };
 		0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */; };
 		0CA9B0521A1CDA1E002711C6 /* LevelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */; };
 		0CA9B0551A1CDA8E002711C6 /* LevelSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */; };
@@ -53,10 +51,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C1B4F3B1A51745700109123 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		0C1B4F3C1A51745700109123 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
-		0C1B4F3D1A51745700109123 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
-		0C1B4F3E1A51745700109123 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
 		0C1B4F401A5174B200109123 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DifficultyCell.xib; sourceTree = "<group>"; };
 		0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LevelSelectViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -117,9 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C1B4F411A5174B200109123 /* libz.dylib in Frameworks */,
 				5B070C857A13FA2F6B8A7A5F /* libPods-TrainingTogether.a in Frameworks */,
-				0C1B4F3F1A51745700109123 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,17 +125,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C1B4F3A1A51744500109123 /* TestFlight */ = {
-			isa = PBXGroup;
-			children = (
-				0C1B4F3B1A51745700109123 /* libTestFlight.a */,
-				0C1B4F3C1A51745700109123 /* TestFlight.h */,
-				0C1B4F3D1A51745700109123 /* TestFlight+AsyncLogging.h */,
-				0C1B4F3E1A51745700109123 /* TestFlight+ManualSessions.h */,
-			);
-			path = TestFlight;
-			sourceTree = "<group>";
-		};
 		0CBFB3DC1A14AF0E007DCC1E = {
 			isa = PBXGroup;
 			children = (
@@ -237,7 +218,6 @@
 		0CBFB4221A14B4F4007DCC1E /* External */ = {
 			isa = PBXGroup;
 			children = (
-				0C1B4F3A1A51744500109123 /* TestFlight */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -342,7 +322,7 @@
 				TargetAttributes = {
 					0CBFB3E41A14AF0E007DCC1E = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = Z4E4J2KFXB;
+						DevelopmentTeam = N328QHYU5S;
 					};
 					0CBFB3FD1A14AF0E007DCC1E = {
 						CreatedOnToolsVersion = 6.1;
@@ -570,7 +550,9 @@
 			baseConfigurationReference = BBBAD250094C1EC1F6701F0C /* Pods-TrainingTogether.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/TrainingTogether/SupportingFiles/PrefixHeader.pch;
@@ -583,6 +565,7 @@
 					"$(PROJECT_DIR)/TrainingTogether/External/TestFlight",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "72887c0b-7a8a-4d8e-912b-7a5ccc490412";
 			};
 			name = Debug;
 		};
@@ -591,7 +574,9 @@
 			baseConfigurationReference = 567B388E4E17264F73FF658F /* Pods-TrainingTogether.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/TrainingTogether/SupportingFiles/PrefixHeader.pch;
@@ -604,6 +589,7 @@
 					"$(PROJECT_DIR)/TrainingTogether/External/TestFlight",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "72887c0b-7a8a-4d8e-912b-7a5ccc490412";
 			};
 			name = Release;
 		};

@@ -53,12 +53,12 @@
 "exercise31"     =   "Front static plank 3 supports with dynamic leg";
 "exercise32"     =   "Front static plank 2 supports";
 "exercise33"     =   "Left side bench 2 supports and leg pendulum";
-"exercise34"     =   "Dynamic gluteus bridge with 3/2 supports";
-"exercise35"     =   "Front static bench 2 supports";
-"exercise36"     =   "Front dynamic plank 2 supports";
-"exercise37"     =   "Front dynamic bench with total body torsion";
-"exercise38"     =   "Front dynamic bench with contact elbow and knee";
-"exercise39"     =   "";
+"exercise34"     =   "Right side bench 2 supports and leg pendulum";
+"exercise35"     =   "Dynamic gluteus bridge with 3/2 supports";
+"exercise36"     =   "Front static bench 2 supports";
+"exercise37"     =   "Front dynamic plank 2 supports";
+"exercise38"     =   "Front dynamic bench with total body torsion";
+"exercise39"     =   "Front dynamic bench with contact elbow and knee";
 
 /* ISTRUZIONI */
 "instruction1"   =   "Maintain the position represented in the picture for the time indicated by the chosen training programme. Warning: always keep the abdomen in contraction throughout the exercise. Your back should remain straight, without always increase its physiological lordosis.";

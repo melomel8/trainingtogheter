@@ -48,11 +48,6 @@ ZoomableView* zommedView;
     [self drawView];
     exerciseImgPageControl.numberOfPages = NUM_PHOTOS;
     exerciseImgPageControl.currentPage = 0;
-    
-    //Aggiungo il TapGR per riconoscere il tap fuori dalla foto tappata
-    UITapGestureRecognizer* tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(notImageTapped:)];
-    [self.view addGestureRecognizer:tapGR];
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -193,48 +188,53 @@ ZoomableView* zommedView;
 - (void)imageTapped:(UITapGestureRecognizer*)sender
 {
     DLog(@"***HO TAPPATOOOO!!!***");
-    UIImageView* tappedView = (UIImageView*)sender.view;
-    CGFloat statusBarHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
-    CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
-    CGFloat viewY = self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight;
-    DLog(@"viewY è %f", viewY);
-    zommedView = [[ZoomableView alloc] initWithImage:tappedView.image andFrame:CGRectMake((self.view.frame.origin.x + ZOOM_VIEW_MARGIN), (self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight + navigationBarHeight), (self.view.frame.size.width - (2*ZOOM_VIEW_MARGIN)), (self.view.frame.size.height - (2*ZOOM_VIEW_MARGIN+statusBarHeight + navigationBarHeight)))];
-   
-    //self.navigationController.navigationBar.topItem.leftBarButtonItem.enabled = NO;
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
-    
-    
-    [self.view addSubview:zommedView];
-    [zommedView setAlpha:0.0];
-    [UIView beginAnimations:@"AnimazioneAperturaView" context:NULL];
-    [UIView setAnimationDuration:0.4f];
-    [zommedView setAlpha:1.0];
-    [viewGray setAlpha:0.8];
-    [viewGrayIpad setAlpha:0.8];
-    [UIView commitAnimations];
-    
+    if (zommedView == nil)
+    {
+        UIImageView* tappedView = (UIImageView*)sender.view;
+        CGFloat statusBarHeight = [[UIApplication sharedApplication] statusBarFrame].size.height;
+        CGFloat navigationBarHeight = self.navigationController.navigationBar.frame.size.height;
+        CGFloat viewY = self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight;
+        DLog(@"viewY è %f", viewY);
+        zommedView = [[ZoomableView alloc] initWithImage:tappedView.image andFrame:CGRectMake((self.view.frame.origin.x + ZOOM_VIEW_MARGIN), (self.view.frame.origin.y + ZOOM_VIEW_MARGIN + statusBarHeight + navigationBarHeight), (self.view.frame.size.width - (2*ZOOM_VIEW_MARGIN)), (self.view.frame.size.height - (2*ZOOM_VIEW_MARGIN+statusBarHeight + navigationBarHeight)))];
+        
+        [self.navigationController setNavigationBarHidden:YES animated:YES];
+        [self.view addSubview:zommedView];
+        [zommedView setAlpha:0.0];
+        //Aggiungo il TapGR per riconoscere il tap fuori dalla foto tappata
+        UITapGestureRecognizer* tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(notImageTapped:)];
+        [self.view addGestureRecognizer:tapGR];
+        
+        [UIView beginAnimations:@"AnimazioneAperturaView" context:NULL];
+        [UIView setAnimationDuration:0.4f];
+        [zommedView setAlpha:1.0];
+        [viewGray setAlpha:0.8];
+        [viewGrayIpad setAlpha:0.8];
+        [UIView commitAnimations];
+    }
 }
 
 -(void)notImageTapped:(UITapGestureRecognizer *)sender
 {
-
-    DLog(@"***HO tappato fuori dalla foto***");
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-    
-    [UIView beginAnimations:@"AnimazioneChiusuraView" context:NULL];
-    [UIView setAnimationDuration:0.4f];
-    [UIView setAnimationDelegate:self];
-    [UIView setAnimationDidStopSelector:@selector(animationEnded)];
-    [zommedView setAlpha:0.0f];
-    [viewGray setAlpha:0];
-    [viewGrayIpad setAlpha:0];
-    [UIView commitAnimations];
-
+    if (zommedView.alpha == 1)
+    {
+        DLog(@"***HO tappato fuori dalla foto***");
+        [self.navigationController setNavigationBarHidden:NO animated:YES];
+        [UIView beginAnimations:@"AnimazioneChiusuraView" context:NULL];
+        [UIView setAnimationDuration:0.4f];
+        [UIView setAnimationDelegate:self];
+        [UIView setAnimationDidStopSelector:@selector(animationEnded)];
+        [zommedView setAlpha:0.0f];
+        [viewGray setAlpha:0];
+        [viewGrayIpad setAlpha:0];
+        [UIView commitAnimations];
+    }
 }
 
 - (void)animationEnded
 {
     [zommedView removeFromSuperview];
+    zommedView = nil;
+    [self.view removeGestureRecognizer:[self.view.gestureRecognizers objectAtIndex:0]];
 }
 
 - (void)didReceiveMemoryWarning {
