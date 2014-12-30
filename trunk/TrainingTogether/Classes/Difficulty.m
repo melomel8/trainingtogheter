@@ -9,7 +9,7 @@
 #import "Difficulty.h"
 
 @implementation Difficulty
-@synthesize DifficultyId, DifficultyName, DifficultyNote;
+@synthesize DifficultyId, DifficultyName, DifficultyNote, DifficultyImageName;
 
 -(id)initFromResultSet:(FMResultSet *)resultSet
 {
@@ -18,6 +18,7 @@
         DifficultyId = [resultSet intForColumn:@"difficultyId"];
         DifficultyName = [resultSet stringForColumn:@"difficultyName"];
         DifficultyNote = [resultSet stringForColumn:@"difficultyNote"];
+        DifficultyImageName = [resultSet stringForColumn:@"difficultyImage"];
     }
     return self;
 }

@@ -81,7 +81,7 @@
     Difficulty* currentDifficulty = [difficultiesArray objectAtIndex:indexPath.row];
     levelNameLabel.text = NSLocalizedString(currentDifficulty.DifficultyName, currentDifficulty.DifficultyName);
     //provo ad aggiungere la foto
-    UIImage* levelImage = [UIImage imageNamed:@"1.Plank statico frontale a 4 appoggi.jpg"];
+    UIImage* levelImage = [UIImage imageNamed:currentDifficulty.DifficultyImageName];
     levelImageView.image = levelImage;
     
     return theCell;

@@ -17,11 +17,13 @@
     NSInteger DifficultyId;
     NSString* DifficultyName;
     NSString* DifficultyNote;
+    NSString* DifficultyImageName;
 }
 
 @property(nonatomic, assign) NSInteger DifficultyId;
 @property(nonatomic, retain) NSString* DifficultyName;
 @property(nonatomic, retain) NSString* DifficultyNote;
+@property(nonatomic, retain) NSString* DifficultyImageName;
 
 /*!
  Costruttore che inizializza un Difficulty
