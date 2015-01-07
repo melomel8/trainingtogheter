@@ -36,8 +36,8 @@
 +(NSInteger)getProgramIdForDifficultyId:(NSInteger)difficultyId;
 {
     FMDatabase* db= [DBUtil instance];
-    NSInteger   progrId;
-    NSInteger rowCount=0;
+    NSInteger   progrId = -1;
+    NSInteger rowCount = 0;
     if (db)
     {
         NSString* query=[NSString stringWithFormat:  @"SELECT DISTINCT t.programId FROM tbTrainings t WHERE t.difficultyId=%d", difficultyId];
@@ -49,7 +49,7 @@
         
         while ([rs next])
         {
-            progrId= [rs intForColumn:@"ProgramId"];
+            progrId = [rs intForColumn:@"ProgramId"];
             rowCount += 1;
         }
         [db close];

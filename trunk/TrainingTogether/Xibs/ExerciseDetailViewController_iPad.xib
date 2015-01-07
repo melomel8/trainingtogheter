@@ -33,7 +33,7 @@
                                 <outlet property="delegate" destination="-1" id="xHq-3S-qFH"/>
                             </connections>
                         </scrollView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Jhf-N5-OTt">
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="Jhf-N5-OTt">
                             <rect key="frame" x="589" y="303" width="390" height="317"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -171,6 +171,7 @@ ZoomableView* zommedView;
         UIImageView* exerciseImageView = [[UIImageView alloc] initWithImage:exerciseImage];
         [exerciseImageView setFrame:CGRectMake(x, y, WIDTH, HEIGHT)];
         [exerciseImageView setUserInteractionEnabled:YES];
+        [exerciseImageView setContentMode:UIViewContentModeScaleAspectFit];
         [exerciseImgScrollView addSubview:exerciseImageView];
         x = x + WIDTH + (2*GAP);
         
