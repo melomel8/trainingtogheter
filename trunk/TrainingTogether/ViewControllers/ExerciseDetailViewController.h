@@ -32,4 +32,6 @@
 @property (nonatomic, retain) NSString* ExerciseRepCharge;
 @property (nonatomic, retain) NSString* ExerciseInstructions;
 
+- (IBAction)chronoButtonTapped:(id)sender;
+
 @end

@@ -19,6 +19,10 @@
 "top"           =   "Top";
 "overthetop"    =   "Over The Top";
 
+/* WORK TYPES */
+"normal"        =   "Normale";
+"circuit"       =   "Circuito";
+
 /* ESERCIZI */
 "exercise1"      =   "Plank statico frontale a 4 appoggi";
 "exercise2"      =   "Plank statico laterale sinistro a 3 appoggi";

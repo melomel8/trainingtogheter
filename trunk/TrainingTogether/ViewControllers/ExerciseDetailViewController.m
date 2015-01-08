@@ -275,4 +275,11 @@ ZoomableView* zommedView;
     [UIView commitAnimations];
 }
 
+#pragma mark - IBAction
+
+- (void)chronoButtonTapped:(id)sender
+{
+    //TODO: aprire il chrono scaricandolo da cocoa controls
+}
+
 @end

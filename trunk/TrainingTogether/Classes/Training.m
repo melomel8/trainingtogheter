@@ -15,15 +15,16 @@
 {
     if  ((self = [super init]))
     {
-        programId       = [resultSet intForColumn:@"programId"];
-        difficultyId    = [resultSet intForColumn:@"difficultyId"];
-        exerciseId      = [resultSet intForColumn:@"exerciseId"];
-        numberOfSeries  = [resultSet intForColumn:@"numberOfSeries"];
-        repetitions     = [resultSet intForColumn:@"repetitions"];
-        charge          = [resultSet intForColumn:@"charge"];
-        pauseSeconds    = [resultSet intForColumn:@"pauseSeconds"];
-        mediaPath       = [resultSet stringForColumn:@"mediaPath"];
-        exercise        = [[Exercise alloc] initFromResultSet:resultSet];
+        programId           = [resultSet intForColumn:@"programId"];
+        difficultyId        = [resultSet intForColumn:@"difficultyId"];
+        exerciseId          = [resultSet intForColumn:@"exerciseId"];
+        numberOfSeries      = [resultSet intForColumn:@"numberOfSeries"];
+        repetitions         = [resultSet intForColumn:@"repetitions"];
+        circuitRepetitions  = [resultSet intForColumn:@"circuitRepetitions"];
+        charge              = [resultSet intForColumn:@"charge"];
+        pauseSeconds        = [resultSet intForColumn:@"pauseSeconds"];
+        mediaPath           = [resultSet stringForColumn:@"mediaPath"];
+        exercise            = [[Exercise alloc] initFromResultSet:resultSet];
     }
         
     return self;

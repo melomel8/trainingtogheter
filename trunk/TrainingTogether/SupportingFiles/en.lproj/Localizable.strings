@@ -19,6 +19,10 @@
 "top"           =   "Top";
 "overthetop"    =   "Over The Top";
 
+/* WORK TYPES */
+"normal"        =   "Normal";
+"circuit"       =   "Circuit";
+
 /* EXERCISES */
 "exercise1"      =   "Front static plank 4 supports";
 "exercise2"      =   "Left side static plank 3 supports";

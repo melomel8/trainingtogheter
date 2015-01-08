@@ -76,7 +76,7 @@
     //popolo la cella
     Training* currentTraining = [progrDetailArray objectAtIndex:indexPath.row];
     programDetailLabelExerciseName.text= NSLocalizedString(currentTraining.exercise.ExerciseName, currentTraining.exerciseName);
-    programDetailLabelRepCharge.text= [NSString stringWithFormat:@"%dx%d r.%d\"", currentTraining.numberOfSeries, currentTraining.repetitions, currentTraining.pauseSeconds];
+    programDetailLabelRepCharge.text= [NSString stringWithFormat:@"%@: %dx%d r.%d\" - %@: %d\"", NSLocalizedString(@"normal", @"Normal"), (int)currentTraining.numberOfSeries, (int)currentTraining.repetitions, (int)currentTraining.pauseSeconds, NSLocalizedString(@"circuit", @"circuit"), (int)currentTraining.circuitRepetitions];
     
     UIImage* progDetailImage = [UIImage imageNamed:currentTraining.mediaPath];
     DLog(@"***CARICO NOME FOTO: %@ ***",currentTraining.mediaPath);
@@ -94,8 +94,8 @@
     ExerciseDetailViewController* exerciseVC = [[ExerciseDetailViewController alloc] initWithNibName:@"ExerciseDetailViewController" bundle:nil];
     exerciseVC.ExerciseId = t.exerciseId;
     exerciseVC.ExerciseName = NSLocalizedString(t.exercise.ExerciseName, t.exercise.ExerciseName);
-    exerciseVC.ExerciseRepCharge = [NSString stringWithFormat:@"%dx%d r.%d\"",t.numberOfSeries, t.repetitions, t.pauseSeconds];
-    exerciseVC.ExerciseInstructions = t.exercise.ExerciseInstructions;  //TODO inserire localizzazione
+    exerciseVC.ExerciseRepCharge = [NSString stringWithFormat:@"%@: %dx%d r.%d\" - %@: %d\"", NSLocalizedString(@"normal", @"Normal"), (int)t.numberOfSeries, (int)t.repetitions, (int)t.pauseSeconds, NSLocalizedString(@"circuit", @"circuit"), (int)t.circuitRepetitions];
+    exerciseVC.ExerciseInstructions = NSLocalizedString(t.exercise.ExerciseInstructions, t.exercise.ExerciseInstructions);
     DLog(@"ID_ESERCIZIO: %d ", t.exerciseId);
     DLog(@"NOME_ESERCIZIO: %@ ", t.exercise.ExerciseName);
     DLog(@"REP_CHARGE: %@ ", exerciseVC.ExerciseRepCharge);
