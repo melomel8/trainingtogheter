@@ -20,8 +20,11 @@
 "overthetop"    =   "Over The Top";
 
 /* WORK TYPES */
+"workType"      =   "Tipo di Allenamento";
+"selectWork"    =   "Seleziona il tipo di allenamento";
 "normal"        =   "Normale";
 "circuit"       =   "Circuito";
+"recovery"      =   "Recupero";
 
 /* ESERCIZI */
 "exercise1"      =   "Plank statico frontale a 4 appoggi";
@@ -108,3 +111,7 @@
 /* MESSAGGI */
 "noProgramsTitle"   =   "Nessun Programma";
 "noProgramsMessage" =   "Non ci sono programmi per il livello selezionato";
+
+/* MISC */
+"undo" = "Annulla";
+"close" = "Chiudi";

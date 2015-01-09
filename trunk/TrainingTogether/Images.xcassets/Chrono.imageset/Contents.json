@@ -1,19 +1,29 @@
 {
   "images" : [
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "scale" : "1x",
       "filename" : "chrono.png"
     },
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "scale" : "2x",
       "filename" : "chrono@2x.png"
     },
     {
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "scale" : "3x",
       "filename" : "chrono@3x.png"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "1x",
+      "filename" : "chronoIpad.png"
+    },
+    {
+      "idiom" : "ipad",
+      "scale" : "2x",
+      "filename" : "chronoIpad@2x.png"
     }
   ],
   "info" : {

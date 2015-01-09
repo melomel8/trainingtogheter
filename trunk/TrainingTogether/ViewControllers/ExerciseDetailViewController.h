@@ -13,11 +13,15 @@
     NSInteger   ExerciseId;
     NSString*   ExerciseName;
     NSString*   ExerciseRepCharge;
+    NSInteger   NormalCharge;
+    NSInteger   CircuitCharge;
+    NSInteger   Recovery;
     NSString*   ExerciseInstructions;
     NSArray*    exerciseArray;
     
     IBOutlet    UIView*         viewContainer;
     IBOutlet    UILabel*        exerciseNameLabel;
+    IBOutlet    UIButton*       chronoButton;
     IBOutlet    UIScrollView*   exerciseImgScrollView;
     IBOutlet    UIPageControl*  exerciseImgPageControl;
     IBOutlet    UILabel*        exerciseRepChargeLabel;
@@ -31,6 +35,9 @@
 @property (nonatomic, retain) NSString* ExerciseName;
 @property (nonatomic, retain) NSString* ExerciseRepCharge;
 @property (nonatomic, retain) NSString* ExerciseInstructions;
+@property (nonatomic, assign) NSInteger NormalCharge;
+@property (nonatomic, assign) NSInteger CircuitCharge;
+@property (nonatomic, assign) NSInteger Recovery;
 
 - (IBAction)chronoButtonTapped:(id)sender;
 

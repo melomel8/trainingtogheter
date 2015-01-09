@@ -84,7 +84,7 @@
     NSMutableArray* resultArray = [NSMutableArray array]; //ritorna un array vuoto
     if (db)
     {
-        NSString* query = [NSString stringWithFormat:@"SELECT t.programId, t.difficultyId, t.exerciseId, t.numberOfSeries, t.repetitions, t.charge, "
+        NSString* query = [NSString stringWithFormat:@"SELECT t.programId, t.difficultyId, t.exerciseId, t.numberOfSeries, t.repetitions, t.charge, t.circuitRepetitions, "
                                                              "t.pauseSeconds, e.exerciseName, e.exerciseInstructions, min(m.mediapath) as mediapath "
                                                         "FROM tbTrainings t JOIN tbExercises e ON t.exerciseId = e.exerciseId "
                                                               "JOIN tbMediaExercise me ON t.exerciseId = me.exerciseId "

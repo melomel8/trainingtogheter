@@ -96,6 +96,9 @@
     exerciseVC.ExerciseName = NSLocalizedString(t.exercise.ExerciseName, t.exercise.ExerciseName);
     exerciseVC.ExerciseRepCharge = [NSString stringWithFormat:@"%@: %dx%d r.%d\" - %@: %d\"", NSLocalizedString(@"normal", @"Normal"), (int)t.numberOfSeries, (int)t.repetitions, (int)t.pauseSeconds, NSLocalizedString(@"circuit", @"circuit"), (int)t.circuitRepetitions];
     exerciseVC.ExerciseInstructions = NSLocalizedString(t.exercise.ExerciseInstructions, t.exercise.ExerciseInstructions);
+    exerciseVC.NormalCharge = t.repetitions;
+    exerciseVC.CircuitCharge = t.circuitRepetitions;
+    exerciseVC.Recovery = t.pauseSeconds;
     DLog(@"ID_ESERCIZIO: %d ", t.exerciseId);
     DLog(@"NOME_ESERCIZIO: %@ ", t.exercise.ExerciseName);
     DLog(@"REP_CHARGE: %@ ", exerciseVC.ExerciseRepCharge);

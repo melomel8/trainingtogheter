@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AA8A869E1FB0A0894B586AB4"
-               BuildableName = "libPods-TrainingTogether.a"
-               BlueprintName = "Pods-TrainingTogether"
+               BlueprintIdentifier = "7AF16024824D4D7E49ED8026"
+               BuildableName = "libPods-TrainingTogether-DDHTimerControl.a"
+               BlueprintName = "Pods-TrainingTogether-DDHTimerControl"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

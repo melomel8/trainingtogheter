@@ -20,8 +20,11 @@
 "overthetop"    =   "Over The Top";
 
 /* WORK TYPES */
+"workType"      =   "Work Type";
+"selectWork"    =   "Select Work Type";
 "normal"        =   "Normal";
 "circuit"       =   "Circuit";
+"recovery"      =   "Recovery";
 
 /* EXERCISES */
 "exercise1"      =   "Front static plank 4 supports";
@@ -108,3 +111,7 @@
 /* MESSAGES*/
 "noProgramsTitle"   =   "No Programs";
 "noProgramsMessage" =   "There are any programs for this level";
+
+/* MISC */
+"undo" = "Undo";
+"close" = "Dismiss";

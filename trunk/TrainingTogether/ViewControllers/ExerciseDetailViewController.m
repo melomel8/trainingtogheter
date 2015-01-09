@@ -9,6 +9,8 @@
 #import "ExerciseDetailViewController.h"
 #import "DBManager.h"
 #import "ZoomableView.h"
+#import "TimerViewController.h"
+#import "UIBAlertView.h"
 
 #ifndef EXERCISE_DETAIL_VIEW_CONTROLLER_CONSTANTS
 #define HEIGHT_IPHONE 150.0f
@@ -39,7 +41,7 @@
 
 ZoomableView* zommedView;
 
-@synthesize ExerciseId, ExerciseName, ExerciseRepCharge, ExerciseInstructions;
+@synthesize ExerciseId, ExerciseName, ExerciseRepCharge, ExerciseInstructions, NormalCharge, CircuitCharge, Recovery;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -71,10 +73,7 @@ ZoomableView* zommedView;
     
     if (isIpad)
     {
-        
-        //UIDeviceOrientation myOrientation = [UIDevice currentDevice].orientation;
         UIInterfaceOrientation myAppOrientation =   [[UIApplication sharedApplication ] statusBarOrientation];
-        //if ((myOrientation == UIDeviceOrientationPortrait) || (myOrientation== UIDeviceOrientationPortraitUpsideDown))
         if ((myAppOrientation == UIDeviceOrientationPortrait) || (myAppOrientation== UIDeviceOrientationPortraitUpsideDown))
         {
             HEIGHT = HEIGHT_IPAD;
@@ -84,11 +83,14 @@ ZoomableView* zommedView;
             y = 0;
             
             //TITOLO
-            [exerciseNameLabel setFrame: CGRectMake(12,74,744,72)];
+            [exerciseNameLabel setFrame: CGRectMake(12,74,663,72)];
             [exerciseNameLabel setFont:[UIFont fontWithName:@"ArialRoundedMTBold" size:24.0f]];
             
+            //PULSANTE CRONOMETRO
+            [chronoButton setFrame:CGRectMake(688, 74, 70, 70)];
+            
             //CARICO/PAUSA
-            [exerciseRepChargeLabel setFrame: CGRectMake(256,662,256,21)];
+            [exerciseRepChargeLabel setFrame: CGRectMake(81,662,606,21)];
             [exerciseRepChargeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:19.0f]];
             
             //ISTRUZIONI
@@ -110,11 +112,14 @@ ZoomableView* zommedView;
             y = 0;
             
             //TITOLO
-            [exerciseNameLabel setFrame: CGRectMake(54, 111, 917, 72)];
+            [exerciseNameLabel setFrame: CGRectMake(54, 111, 834, 72)];
             [exerciseNameLabel setFont:[UIFont fontWithName:@"ArialRoundedMTBold" size:(29.0f)]];
             
+            //PULSANTE CRONOMETRO
+            [chronoButton setFrame:CGRectMake(901, 111, 70, 70)];
+            
             //CARICO/PAUSA
-            [exerciseRepChargeLabel setFrame: CGRectMake(722,247,124,30)];
+            [exerciseRepChargeLabel setFrame: CGRectMake(583,247,390,30)];
             [exerciseRepChargeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:(21.0f)]];
             
             //ISTRUZIONI
@@ -137,11 +142,11 @@ ZoomableView* zommedView;
         y = 0;
         
         //TITOLO
-        [exerciseNameLabel setFrame: CGRectMake(8,66,304,56)];
+        [exerciseNameLabel setFrame: CGRectMake(8,66,265,56)];
         [exerciseNameLabel setFont:[UIFont fontWithName:@"ArialRoundedMTBold" size:(18.0f)]];
         
         //CARICO/PAUSA
-        [exerciseRepChargeLabel setFrame: CGRectMake(81,314,159,21)];
+        [exerciseRepChargeLabel setFrame: CGRectMake(0,314,320,21)];
         [exerciseRepChargeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:(18.0f)]];
         
         //ISTRUZIONI
@@ -153,6 +158,7 @@ ZoomableView* zommedView;
         
         //PAGECONTROL
         [exerciseImgPageControl setFrame: CGRectMake(132,278,56,37)];
+        
     }
     
     DLog(@"Num record in exerciseArray: %d ", NUM_PHOTOS);
@@ -279,7 +285,35 @@ ZoomableView* zommedView;
 
 - (void)chronoButtonTapped:(id)sender
 {
-    //TODO: aprire il chrono scaricandolo da cocoa controls
+    UIBAlertView* alert = [[UIBAlertView alloc] initWithTitle:NSLocalizedString(@"workType", @"Work Type") message:NSLocalizedString(@"selectWork", @"Select Work") cancelButtonTitle:NSLocalizedString(@"undo", @"Undo") otherButtonTitles:NSLocalizedString(@"normal", @"Normal"), NSLocalizedString(@"circuit", @"Circuit"), NSLocalizedString(@"recovery", @"Recovery"), nil];
+    [alert showWithDismissHandler:^(NSInteger selectedIndex, NSString *selectedTitle, BOOL didCancel)
+    {
+        if (didCancel)
+        {
+            DLog(@"User cancelled");
+            return;
+        }
+        else
+        {
+            int timeInterval = 0;
+            switch (selectedIndex)
+            {
+                case 1:
+                    timeInterval = (int)NormalCharge;
+                    break;
+                case 2:
+                    timeInterval = (int)CircuitCharge;
+                    break;
+                case 3:
+                    timeInterval = (int)Recovery;
+                    break;
+                default:
+                    break;
+            }
+            TimerViewController* timerViewController = [[TimerViewController alloc] initWithNibName:@"TimerViewController" bundle:nil timeInterval:timeInterval];
+            [self presentViewController:timerViewController animated:YES completion:nil];
+        }
+    }];
 }
 
 @end

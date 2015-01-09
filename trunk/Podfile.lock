@@ -1,4 +1,5 @@
 PODS:
+  - DDHTimerControl (1.0.0)
   - FMDB (2.4):
     - FMDB/standard
   - FMDB/common (2.4)
@@ -6,9 +7,11 @@ PODS:
     - FMDB/common
 
 DEPENDENCIES:
+  - DDHTimerControl (~> 1.0)
   - FMDB (~> 2.4)
 
 SPEC CHECKSUMS:
+  DDHTimerControl: 829077e9a91f6d0d723a48e76caa109fa789fb63
   FMDB: 0b2fa25e5264ef177973c0cb8c02c711107979aa
 
 COCOAPODS: 0.34.4

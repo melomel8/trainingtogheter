@@ -6,6 +6,12 @@
 // project.
 
 
+// DDHTimerControl
+#define COCOAPODS_POD_AVAILABLE_DDHTimerControl
+#define COCOAPODS_VERSION_MAJOR_DDHTimerControl 1
+#define COCOAPODS_VERSION_MINOR_DDHTimerControl 0
+#define COCOAPODS_VERSION_PATCH_DDHTimerControl 0
+
 // FMDB
 #define COCOAPODS_POD_AVAILABLE_FMDB
 #define COCOAPODS_VERSION_MAJOR_FMDB 2

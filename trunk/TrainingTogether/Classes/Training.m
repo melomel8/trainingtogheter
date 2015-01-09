@@ -9,7 +9,7 @@
 #import "Training.h"
 
 @implementation Training
-@synthesize programId, difficultyId, exerciseId, numberOfSeries, repetitions, charge, pauseSeconds, exercise, mediaPath;
+@synthesize programId, difficultyId, exerciseId, numberOfSeries, repetitions, circuitRepetitions, charge, pauseSeconds, exercise, mediaPath;
 
 - (id)initFromResultSet:(FMResultSet*)resultSet;
 {
