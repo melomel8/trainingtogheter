@@ -10,6 +10,7 @@
 "levelSelectionTitle" = "Seleziona il Livello";
 "programDetailTitle"  = "Dettaglio Programma";
 "exerciseDetailTitle" = "Dettaglio Esercizio";
+"selectYourProgramTitle" = "Seleziona il Programma";
 
 /* LIVELLI DI ALLENAMENTO */
 "basic"         =   "Base";

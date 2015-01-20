@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "LevelSelectViewController.h"
+#import "ProgramSelectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -51,9 +51,10 @@
 {    
     [self createEditableCopyOfDb];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    ProgramSelectionViewController* programSelectionViewController = [[ProgramSelectionViewController alloc] initWithNibName:@"ProgramSelectionViewController" bundle:nil];
+    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:programSelectionViewController];
     
-    LevelSelectViewController* vController = [[LevelSelectViewController alloc] initWithNibName:@"LevelSelectViewController" bundle:nil];
-    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:vController ];
+    
     
     self.window.rootViewController = navController;
     

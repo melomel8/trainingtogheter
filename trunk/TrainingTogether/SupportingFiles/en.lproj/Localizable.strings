@@ -10,6 +10,7 @@
 "levelSelectionTitle" = "Select Your Level";
 "programDetailTitle"  = "Program Detail";
 "exerciseDetailTitle" = "Exercise Detail";
+"selectYourProgramTitle" = "Select Your Program";
 
 /* TRAINING LEVELS */
 "basic"         =   "Basic";

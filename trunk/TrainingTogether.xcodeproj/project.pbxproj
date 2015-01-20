@@ -11,7 +11,11 @@
 		0C28EA5A1A5FEBA20044D5A0 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C28EA591A5FEBA20044D5A0 /* TimerViewController.xib */; };
 		0C28EA5C1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C28EA5B1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib */; };
 		0C28EA611A5FFA590044D5A0 /* UIBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C28EA601A5FFA590044D5A0 /* UIBAlertView.m */; };
+		0C366E661A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */; };
 		0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */; };
+		0C9FBA921A68066700EDE4BC /* ProgramSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FBA911A68066700EDE4BC /* ProgramSelectionViewController.m */; };
+		0C9FBA941A68068800EDE4BC /* ProgramSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FBA931A68068800EDE4BC /* ProgramSelectionViewController.xib */; };
+		0C9FBA981A68096A00EDE4BC /* ProgramSelectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FBA971A68096A00EDE4BC /* ProgramSelectionView.m */; };
 		0CA9B0521A1CDA1E002711C6 /* LevelSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */; };
 		0CA9B0551A1CDA8E002711C6 /* LevelSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */; };
 		0CA9B0581A1CEBB6002711C6 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CA9B0571A1CEBB6002711C6 /* DBManager.m */; };
@@ -62,7 +66,13 @@
 		0C28EA5B1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController_iPad.xib; sourceTree = "<group>"; };
 		0C28EA5F1A5FFA590044D5A0 /* UIBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBAlertView.h; sourceTree = "<group>"; };
 		0C28EA601A5FFA590044D5A0 /* UIBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBAlertView.m; sourceTree = "<group>"; };
+		0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramSelectionViewController_iPad.xib; sourceTree = "<group>"; };
 		0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DifficultyCell.xib; sourceTree = "<group>"; };
+		0C9FBA901A68066700EDE4BC /* ProgramSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramSelectionViewController.h; sourceTree = "<group>"; };
+		0C9FBA911A68066700EDE4BC /* ProgramSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramSelectionViewController.m; sourceTree = "<group>"; };
+		0C9FBA931A68068800EDE4BC /* ProgramSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramSelectionViewController.xib; sourceTree = "<group>"; };
+		0C9FBA961A68096A00EDE4BC /* ProgramSelectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramSelectionView.h; sourceTree = "<group>"; };
+		0C9FBA971A68096A00EDE4BC /* ProgramSelectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramSelectionView.m; sourceTree = "<group>"; };
 		0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = LevelSelectViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelSelectViewController.m; sourceTree = "<group>"; };
 		0CA9B0541A1CDA8E002711C6 /* LevelSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelSelectViewController.xib; sourceTree = "<group>"; };
@@ -152,6 +162,15 @@
 			path = UIBAlertView;
 			sourceTree = "<group>";
 		};
+		0C9FBA951A68095600EDE4BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C9FBA961A68096A00EDE4BC /* ProgramSelectionView.h */,
+				0C9FBA971A68096A00EDE4BC /* ProgramSelectionView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		0CBFB3DC1A14AF0E007DCC1E = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +199,7 @@
 				0C28EA5D1A5FFA3F0044D5A0 /* External */,
 				0CBFB4191A14B4A1007DCC1E /* SupportingFiles */,
 				0CBFB4231A14B4F4007DCC1E /* ViewControllers */,
+				0C9FBA951A68095600EDE4BC /* Views */,
 				0CBFB4241A14B4F4007DCC1E /* Xibs */,
 			);
 			path = TrainingTogether;
@@ -248,10 +268,12 @@
 				489177931A27385D00FBDB91 /* ExerciseDetailViewController.h */,
 				0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */,
 				48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */,
+				0C9FBA901A68066700EDE4BC /* ProgramSelectionViewController.h */,
 				0C28EA561A5FEB8C0044D5A0 /* TimerViewController.h */,
 				489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */,
 				0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */,
 				48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */,
+				0C9FBA911A68066700EDE4BC /* ProgramSelectionViewController.m */,
 				0C28EA571A5FEB8C0044D5A0 /* TimerViewController.m */,
 			);
 			path = ViewControllers;
@@ -272,6 +294,8 @@
 				482AFC1B1A40563400B15119 /* ProgramDetailViewController.xib */,
 				0C28EA5B1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib */,
 				0C28EA591A5FEBA20044D5A0 /* TimerViewController.xib */,
+				0C9FBA931A68068800EDE4BC /* ProgramSelectionViewController.xib */,
+				0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -380,6 +404,7 @@
 			files = (
 				0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */,
 				0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */,
+				0C9FBA941A68068800EDE4BC /* ProgramSelectionViewController.xib in Resources */,
 				0C28EA5C1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib in Resources */,
 				0CBFB4261A14B561007DCC1E /* storage.sqlite in Resources */,
 				48EB63861A309E4600D344A1 /* DifficultyCell_iPad.xib in Resources */,
@@ -392,6 +417,7 @@
 				482AFC1C1A40563400B15119 /* ProgramDetailViewController.xib in Resources */,
 				48EB63881A309E6300D344A1 /* ProgramDetailCell_iPad.xib in Resources */,
 				0CBFB4281A14BD94007DCC1E /* Podfile in Resources */,
+				0C366E661A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib in Resources */,
 				0CBFB41F1A14B4A1007DCC1E /* Info.plist in Resources */,
 				0CA9B0551A1CDA8E002711C6 /* LevelSelectViewController.xib in Resources */,
 				48B66CA01A37163F00E28791 /* ProgramDetailViewController_iPad.xib in Resources */,
@@ -457,8 +483,10 @@
 				0CBFB4301A14F6CB007DCC1E /* Difficulty.m in Sources */,
 				0CBFB41E1A14B4A1007DCC1E /* AppDelegate.m in Sources */,
 				487F16171A432A19007907D9 /* ZoomableView.m in Sources */,
+				0C9FBA981A68096A00EDE4BC /* ProgramSelectionView.m in Sources */,
 				0C28EA611A5FFA590044D5A0 /* UIBAlertView.m in Sources */,
 				0C28EA581A5FEB8C0044D5A0 /* TimerViewController.m in Sources */,
+				0C9FBA921A68066700EDE4BC /* ProgramSelectionViewController.m in Sources */,
 				0CA9B05B1A1CECD0002711C6 /* DBUtil.m in Sources */,
 				48998DB81A1E38F9001C89F2 /* ProgramDetailViewController.m in Sources */,
 			);
