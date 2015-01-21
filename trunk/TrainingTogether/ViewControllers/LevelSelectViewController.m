@@ -22,6 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
     
     difficultiesArray = [DBManager getAllDifficulty];
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])

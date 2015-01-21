@@ -12,6 +12,8 @@
 		0C28EA5C1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C28EA5B1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib */; };
 		0C28EA611A5FFA590044D5A0 /* UIBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C28EA601A5FFA590044D5A0 /* UIBAlertView.m */; };
 		0C366E661A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */; };
+		0C4F19A51A6FFE0200AECE59 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F19A41A6FFE0200AECE59 /* PreviewViewController.m */; };
+		0C4F19A71A6FFEED00AECE59 /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4F19A61A6FFEED00AECE59 /* PreviewViewController.xib */; };
 		0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */; };
 		0C9FBA921A68066700EDE4BC /* ProgramSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C9FBA911A68066700EDE4BC /* ProgramSelectionViewController.m */; };
 		0C9FBA941A68068800EDE4BC /* ProgramSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C9FBA931A68068800EDE4BC /* ProgramSelectionViewController.xib */; };
@@ -31,6 +33,7 @@
 		0CBFB4301A14F6CB007DCC1E /* Difficulty.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB42F1A14F6CB007DCC1E /* Difficulty.m */; };
 		0CBFB4331A14FE9F007DCC1E /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CBFB4321A14FE9F007DCC1E /* Exercise.m */; };
 		0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CEB9D141A1A58B800E397A4 /* Localizable.strings */; };
+		0CF91A871A7010E400260F26 /* PreviewViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CF91A861A7010E400260F26 /* PreviewViewController_iPad.xib */; };
 		482AFC1C1A40563400B15119 /* ProgramDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 482AFC1B1A40563400B15119 /* ProgramDetailViewController.xib */; };
 		487F16171A432A19007907D9 /* ZoomableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 487F16161A432A19007907D9 /* ZoomableView.m */; };
 		489177961A27385D00FBDB91 /* ExerciseDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */; };
@@ -67,6 +70,9 @@
 		0C28EA5F1A5FFA590044D5A0 /* UIBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBAlertView.h; sourceTree = "<group>"; };
 		0C28EA601A5FFA590044D5A0 /* UIBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBAlertView.m; sourceTree = "<group>"; };
 		0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramSelectionViewController_iPad.xib; sourceTree = "<group>"; };
+		0C4F19A31A6FFE0200AECE59 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
+		0C4F19A41A6FFE0200AECE59 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
+		0C4F19A61A6FFEED00AECE59 /* PreviewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewViewController.xib; sourceTree = "<group>"; };
 		0C6E671E1A1E0C4E007711BC /* DifficultyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DifficultyCell.xib; sourceTree = "<group>"; };
 		0C9FBA901A68066700EDE4BC /* ProgramSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramSelectionViewController.h; sourceTree = "<group>"; };
 		0C9FBA911A68066700EDE4BC /* ProgramSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramSelectionViewController.m; sourceTree = "<group>"; };
@@ -100,6 +106,7 @@
 		0CBFB4321A14FE9F007DCC1E /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
 		0CEB9D131A1A58B800E397A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CEB9D151A1A58C400E397A4 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0CF91A861A7010E400260F26 /* PreviewViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreviewViewController_iPad.xib; sourceTree = "<group>"; };
 		482AFC1B1A40563400B15119 /* ProgramDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController.xib; sourceTree = "<group>"; };
 		487F16151A432A19007907D9 /* ZoomableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomableView.h; sourceTree = "<group>"; };
 		487F16161A432A19007907D9 /* ZoomableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomableView.m; sourceTree = "<group>"; };
@@ -267,11 +274,13 @@
 			children = (
 				489177931A27385D00FBDB91 /* ExerciseDetailViewController.h */,
 				0CA9B04F1A1CDA1E002711C6 /* LevelSelectViewController.h */,
+				0C4F19A31A6FFE0200AECE59 /* PreviewViewController.h */,
 				48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */,
 				0C9FBA901A68066700EDE4BC /* ProgramSelectionViewController.h */,
 				0C28EA561A5FEB8C0044D5A0 /* TimerViewController.h */,
 				489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */,
 				0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */,
+				0C4F19A41A6FFE0200AECE59 /* PreviewViewController.m */,
 				48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */,
 				0C9FBA911A68066700EDE4BC /* ProgramSelectionViewController.m */,
 				0C28EA571A5FEB8C0044D5A0 /* TimerViewController.m */,
@@ -296,6 +305,8 @@
 				0C28EA591A5FEBA20044D5A0 /* TimerViewController.xib */,
 				0C9FBA931A68068800EDE4BC /* ProgramSelectionViewController.xib */,
 				0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */,
+				0C4F19A61A6FFEED00AECE59 /* PreviewViewController.xib */,
+				0CF91A861A7010E400260F26 /* PreviewViewController_iPad.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -409,10 +420,12 @@
 				0CBFB4261A14B561007DCC1E /* storage.sqlite in Resources */,
 				48EB63861A309E4600D344A1 /* DifficultyCell_iPad.xib in Resources */,
 				0CBFB3F61A14AF0E007DCC1E /* Images.xcassets in Resources */,
+				0CF91A871A7010E400260F26 /* PreviewViewController_iPad.xib in Resources */,
 				48998DBD1A1E4741001C89F2 /* ProgramDetailCell.xib in Resources */,
 				489177991A27391100FBDB91 /* ExerciseDetailViewController.xib in Resources */,
 				48EB638A1A31F59D00D344A1 /* LevelSelectViewController_iPad.xib in Resources */,
 				0C28EA5A1A5FEBA20044D5A0 /* TimerViewController.xib in Resources */,
+				0C4F19A71A6FFEED00AECE59 /* PreviewViewController.xib in Resources */,
 				48EB63801A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib in Resources */,
 				482AFC1C1A40563400B15119 /* ProgramDetailViewController.xib in Resources */,
 				48EB63881A309E6300D344A1 /* ProgramDetailCell_iPad.xib in Resources */,
@@ -485,6 +498,7 @@
 				487F16171A432A19007907D9 /* ZoomableView.m in Sources */,
 				0C9FBA981A68096A00EDE4BC /* ProgramSelectionView.m in Sources */,
 				0C28EA611A5FFA590044D5A0 /* UIBAlertView.m in Sources */,
+				0C4F19A51A6FFE0200AECE59 /* PreviewViewController.m in Sources */,
 				0C28EA581A5FEB8C0044D5A0 /* TimerViewController.m in Sources */,
 				0C9FBA921A68066700EDE4BC /* ProgramSelectionViewController.m in Sources */,
 				0CA9B05B1A1CECD0002711C6 /* DBUtil.m in Sources */,

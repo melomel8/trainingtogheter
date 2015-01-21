@@ -138,5 +138,29 @@
     
 }
 
++(NSArray*)getAllMediasFromProgram:(NSInteger)programId
+{
+    //TODO: aggiornare la query quando ci saranno più programmi
+    FMDatabase* db = [DBUtil instance];
+    NSMutableArray* resultArray = [NSMutableArray array];
+    if (db)
+    {
+        NSString* query = [NSString stringWithFormat:@"SELECT m.exerciseId, s.mediaId, s.mediaPath "
+                           "FROM tbMediaExercise m JOIN tbMedias s "
+                           "ON m.mediaId = s.mediaId "
+                           "WHERE isVideo = 0 "];
+        FMResultSet* rs = [db executeQuery:query];
+        while ([rs next])
+        {
+            Media* m = [[Media alloc] initFromResultSet:rs];
+            
+            [resultArray addObject:m];
+        }
+        [db close];
+    }
+    
+    return resultArray.count >0 ? [NSArray arrayWithArray:resultArray] : nil;
+    
+}
 
 @end

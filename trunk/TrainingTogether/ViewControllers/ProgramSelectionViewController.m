@@ -8,7 +8,7 @@
 
 #import "ProgramSelectionViewController.h"
 #import "ProgramSelectionView.h"
-#import "LevelSelectViewController.h"
+#import "PreviewViewController.h"
 
 @interface ProgramSelectionViewController()<ProgramSelectionDelegate>
 {
@@ -27,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:YES];
     [titleLabel setText:NSLocalizedString(@"selectYourProgramTitle", @"Select Your Program")];
     
     programSelection = [[ProgramSelectionView alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.view.frame)-RADIUS, CGRectGetMidY(self.view.frame)-RADIUS, 2 *  RADIUS, 2 * RADIUS)];
@@ -91,8 +92,8 @@
 
 - (void)sectorTapped:(id)sender withSector:(kSector)theSector
 {
-    LevelSelectViewController* levelSelect = [[LevelSelectViewController alloc] initWithNibName:@"LevelSelectViewController" bundle:nil];
-    [self.navigationController pushViewController:levelSelect animated:YES];
+    PreviewViewController* previewViewController = [[PreviewViewController alloc] initWithNibName:@"PreviewViewController" bundle:nil];
+    [self.navigationController pushViewController:previewViewController animated:YES];
     
 }
 
