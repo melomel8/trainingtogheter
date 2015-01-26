@@ -41,7 +41,7 @@
 
 ZoomableView* zommedView;
 
-@synthesize ExerciseId, ExerciseName, ExerciseRepCharge, ExerciseInstructions, NormalCharge, CircuitCharge, Recovery;
+@synthesize ExerciseId, ExerciseName, ExerciseRepCharge, ExerciseInstructions, NormalCharge, CircuitCharge, Recovery, CircuitRecovery;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -146,7 +146,7 @@ ZoomableView* zommedView;
         [exerciseNameLabel setFont:[UIFont fontWithName:@"ArialRoundedMTBold" size:(18.0f)]];
         
         //CARICO/PAUSA
-        [exerciseRepChargeLabel setFrame: CGRectMake(0,314,320,21)];
+        [exerciseRepChargeLabel setFrame: CGRectMake(0,314,self.view.frame.size.width,21)];
         [exerciseRepChargeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:(18.0f)]];
         
         //ISTRUZIONI
@@ -154,7 +154,7 @@ ZoomableView* zommedView;
         [exerciseInstructionsTextView setFont:[UIFont fontWithName:@"HelveticaNeue" size:(14.0f)]];
         
         //SCROLLVIEW
-        [exerciseImgScrollView setFrame: CGRectMake(0,127,320,150)];
+        [exerciseImgScrollView setFrame: CGRectMake(0,127,self.view.frame.size.width,150)];
         
         //PAGECONTROL
         [exerciseImgPageControl setFrame: CGRectMake(132,278,56,37)];
@@ -285,7 +285,7 @@ ZoomableView* zommedView;
 
 - (void)chronoButtonTapped:(id)sender
 {
-    UIBAlertView* alert = [[UIBAlertView alloc] initWithTitle:NSLocalizedString(@"workType", @"Work Type") message:NSLocalizedString(@"selectWork", @"Select Work") cancelButtonTitle:NSLocalizedString(@"undo", @"Undo") otherButtonTitles:NSLocalizedString(@"normal", @"Normal"), NSLocalizedString(@"circuit", @"Circuit"), NSLocalizedString(@"recovery", @"Recovery"), nil];
+    UIBAlertView* alert = [[UIBAlertView alloc] initWithTitle:NSLocalizedString(@"workType", @"Work Type") message:NSLocalizedString(@"selectWork", @"Select Work") cancelButtonTitle:NSLocalizedString(@"undo", @"Undo") otherButtonTitles:NSLocalizedString(@"normal", @"Normal"), NSLocalizedString(@"circuit", @"Circuit"), NSLocalizedString(@"recovery", @"Recovery"), NSLocalizedString(@"circuitRec", @""), nil];
     [alert showWithDismissHandler:^(NSInteger selectedIndex, NSString *selectedTitle, BOOL didCancel)
     {
         if (didCancel)
@@ -306,6 +306,9 @@ ZoomableView* zommedView;
                     break;
                 case 3:
                     timeInterval = (int)Recovery;
+                    break;
+                case 4:
+                    timeInterval = (int)CircuitRecovery;
                     break;
                 default:
                     break;

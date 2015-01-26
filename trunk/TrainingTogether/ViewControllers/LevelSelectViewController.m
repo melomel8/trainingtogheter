@@ -22,7 +22,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:NO];
     
     difficultiesArray = [DBManager getAllDifficulty];
     if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)])
@@ -34,6 +33,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
     [self.navigationItem setTitle:NSLocalizedString(@"levelSelectionTitle", @"Select Your Level")];
 }
 

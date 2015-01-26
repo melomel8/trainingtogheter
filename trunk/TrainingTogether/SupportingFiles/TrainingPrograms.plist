@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>it.chetozzi.trainingtogether.fitballtraining</string>
+	<string>it.chetozzi.trainingtogether.suspensiontraining</string>
+	<string>it.chetozzi.trainingtogether.calisthensictraining</string>
+	<string>it.chetozzi.trainingtogether.coordinativetraining</string>
+	<string>it.chetozzi.trainingtogether.inyourhome</string>
+	<string>it.chetozzi.trainingtogether.functionaltraining</string>
+	<string>it.chetozzi.trainingtogether.metabolictraining</string>
+</array>
+</plist>

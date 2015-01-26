@@ -7,10 +7,11 @@
 */
 
 /* TITLES */
-"levelSelectionTitle" = "Seleziona il Livello";
-"programDetailTitle"  = "Dettaglio Programma";
-"exerciseDetailTitle" = "Dettaglio Esercizio";
-"selectYourProgramTitle" = "Seleziona il Programma";
+"levelSelectionTitle"       = "Seleziona il Livello";
+"programDetailTitle"        = "Dettaglio Programma";
+"exerciseDetailTitle"       = "Dettaglio Esercizio";
+"selectYourProgramTitle"    = "Seleziona il Programma";
+"help"                      = "Aiuto";
 
 /* LIVELLI DI ALLENAMENTO */
 "basic"         =   "Base";
@@ -26,6 +27,7 @@
 "normal"        =   "Normale";
 "circuit"       =   "Circuito";
 "recovery"      =   "Recupero";
+"circuitRec"    =   "Recupero Circuito";
 
 /* ESERCIZI */
 "exercise1"      =   "Plank statico frontale a 4 appoggi";
@@ -116,3 +118,10 @@
 /* MISC */
 "undo" = "Annulla";
 "close" = "Chiudi";
+
+/* APP PURCHASE */
+"purchaseTitle"="Acquista Programma";
+"purchaseMessage"="Vuoi comprare questo programma di allenamento?";
+"purchaseBuy"="Compra subito!";
+"purchaseNo"="No, grazie";
+"purchaseRestore"="Ripristina acquisti";

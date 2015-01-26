@@ -7,10 +7,11 @@
 */
 
 /* TITLES */
-"levelSelectionTitle" = "Select Your Level";
-"programDetailTitle"  = "Program Detail";
-"exerciseDetailTitle" = "Exercise Detail";
-"selectYourProgramTitle" = "Select Your Program";
+"levelSelectionTitle"       = "Select Your Level";
+"programDetailTitle"        = "Program Detail";
+"exerciseDetailTitle"       = "Exercise Detail";
+"selectYourProgramTitle"    = "Select Your Program";
+"help"                      = "Help";
 
 /* TRAINING LEVELS */
 "basic"         =   "Basic";
@@ -26,6 +27,7 @@
 "normal"        =   "Normal";
 "circuit"       =   "Circuit";
 "recovery"      =   "Recovery";
+"circuitRec"    =   "Circuit Recovery";
 
 /* EXERCISES */
 "exercise1"      =   "Front static plank 4 supports";
@@ -116,3 +118,10 @@
 /* MISC */
 "undo" = "Undo";
 "close" = "Dismiss";
+
+/* APP PURCHASE */
+"purchaseTitle"="Purchase Program";
+"purchaseMessage"="Would you like to buy this program?";
+"purchaseBuy"="Buy Now!";
+"purchaseNo"="No, thanks";
+"purchaseRestore"="Restore purchases";

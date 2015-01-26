@@ -19,6 +19,7 @@
     NSInteger   circuitRepetitions;
     NSInteger   charge;
     NSInteger   pauseSeconds;
+    NSInteger   circuitPauseSeconds;
     NSString*   mediaId;
     NSString*   mediaPath;
     Exercise*   exercise;
@@ -32,6 +33,7 @@
 @property (nonatomic, assign)   NSInteger   circuitRepetitions;
 @property (nonatomic, assign)   NSInteger   charge;
 @property (nonatomic, assign)   NSInteger   pauseSeconds;
+@property (nonatomic, assign)   NSInteger   circuitPauseSeconds;
 @property (nonatomic, retain)   NSString*   mediaPath;
 @property (nonatomic, retain)   Exercise*   exercise;
 

@@ -16,6 +16,7 @@
     NSInteger   NormalCharge;
     NSInteger   CircuitCharge;
     NSInteger   Recovery;
+    NSInteger   CircuitRecovery;
     NSString*   ExerciseInstructions;
     NSArray*    exerciseArray;
     
@@ -37,6 +38,7 @@
 @property (nonatomic, retain) NSString* ExerciseInstructions;
 @property (nonatomic, assign) NSInteger NormalCharge;
 @property (nonatomic, assign) NSInteger CircuitCharge;
+@property (nonatomic, assign) NSInteger CircuitRecovery;
 @property (nonatomic, assign) NSInteger Recovery;
 
 - (IBAction)chronoButtonTapped:(id)sender;

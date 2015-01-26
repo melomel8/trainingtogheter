@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define RADIUS 100.0f
-
 typedef enum
 {
     kCoreStability = 0,
@@ -25,15 +23,18 @@ typedef enum
 @protocol ProgramSelectionDelegate <NSObject>
 
 @optional
--(void)sectorTapped:(id)sender withSector:(kSector)theSector;
+-(void)sectorTapped:(id)sender withSector:(kSector)theSector isPurchased:(BOOL)isPurchased;
 
 @end
 
 @interface ProgramSelectionView : UIView
 {
     __unsafe_unretained id<ProgramSelectionDelegate>    delegate;
+    
+    CGFloat     radius;
 }
 
-@property(nonatomic, assign)    id<ProgramSelectionDelegate>    delegate;
+@property(nonatomic, assign)      id<ProgramSelectionDelegate>    delegate;
+@property(nonatomic, readonly)    CGFloat                         radius;
 
 @end

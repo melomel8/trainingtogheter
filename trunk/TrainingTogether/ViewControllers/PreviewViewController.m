@@ -34,7 +34,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
     medias = [[NSArray alloc] initWithArray:[DBManager getAllMediasFromProgram:-1]];
     currentIndex = 0;
     
@@ -50,6 +49,12 @@
     
     UITapGestureRecognizer* tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTapped:)];
     [frontImageView addGestureRecognizer:tapGR];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)didReceiveMemoryWarning {

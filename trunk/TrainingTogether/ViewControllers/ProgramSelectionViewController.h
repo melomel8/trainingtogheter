@@ -11,6 +11,10 @@
 @interface ProgramSelectionViewController : GeneralViewController
 {
     IBOutlet    UILabel*    titleLabel;
+    IBOutlet    UIView*     container;
+    IBOutlet    UIButton*   helpButton;
 }
+
+- (IBAction)helpButtonTapped:(id)sender;
 
 @end

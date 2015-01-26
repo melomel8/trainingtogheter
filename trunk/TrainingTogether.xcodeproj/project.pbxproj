@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0D90491A725A19002D294E /* UINavigationController+Orientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0D90481A725A19002D294E /* UINavigationController+Orientation.m */; };
+		0C0D904B1A7285AF002D294E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C0D904A1A7285AF002D294E /* StoreKit.framework */; };
+		0C0D904D1A729279002D294E /* TrainingPrograms.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C0D904C1A729279002D294E /* TrainingPrograms.plist */; };
+		0C0D90551A72ABFF002D294E /* PurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0D90541A72ABFF002D294E /* PurchaseManager.m */; };
 		0C28EA581A5FEB8C0044D5A0 /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C28EA571A5FEB8C0044D5A0 /* TimerViewController.m */; };
 		0C28EA5A1A5FEBA20044D5A0 /* TimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C28EA591A5FEBA20044D5A0 /* TimerViewController.xib */; };
 		0C28EA5C1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C28EA5B1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib */; };
 		0C28EA611A5FFA590044D5A0 /* UIBAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C28EA601A5FFA590044D5A0 /* UIBAlertView.m */; };
+		0C2A4B9E1A768C610093910A /* Tutorial.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0C2A4B9D1A768C610093910A /* Tutorial.pdf */; };
 		0C366E661A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */; };
 		0C4F19A51A6FFE0200AECE59 /* PreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C4F19A41A6FFE0200AECE59 /* PreviewViewController.m */; };
 		0C4F19A71A6FFEED00AECE59 /* PreviewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4F19A61A6FFEED00AECE59 /* PreviewViewController.xib */; };
@@ -62,6 +67,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0D90471A725A19002D294E /* UINavigationController+Orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Orientation.h"; sourceTree = "<group>"; };
+		0C0D90481A725A19002D294E /* UINavigationController+Orientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Orientation.m"; sourceTree = "<group>"; };
+		0C0D904A1A7285AF002D294E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0C0D904C1A729279002D294E /* TrainingPrograms.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TrainingPrograms.plist; sourceTree = "<group>"; };
+		0C0D90531A72ABFF002D294E /* PurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurchaseManager.h; sourceTree = "<group>"; };
+		0C0D90541A72ABFF002D294E /* PurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PurchaseManager.m; sourceTree = "<group>"; };
 		0C1B4F401A5174B200109123 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		0C28EA561A5FEB8C0044D5A0 /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerViewController.h; sourceTree = "<group>"; };
 		0C28EA571A5FEB8C0044D5A0 /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
@@ -69,6 +80,7 @@
 		0C28EA5B1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimerViewController_iPad.xib; sourceTree = "<group>"; };
 		0C28EA5F1A5FFA590044D5A0 /* UIBAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBAlertView.h; sourceTree = "<group>"; };
 		0C28EA601A5FFA590044D5A0 /* UIBAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBAlertView.m; sourceTree = "<group>"; };
+		0C2A4B9D1A768C610093910A /* Tutorial.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Tutorial.pdf; sourceTree = "<group>"; };
 		0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramSelectionViewController_iPad.xib; sourceTree = "<group>"; };
 		0C4F19A31A6FFE0200AECE59 /* PreviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewViewController.h; sourceTree = "<group>"; };
 		0C4F19A41A6FFE0200AECE59 /* PreviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreviewViewController.m; sourceTree = "<group>"; };
@@ -139,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B070C857A13FA2F6B8A7A5F /* libPods-TrainingTogether.a in Frameworks */,
+				0C0D904B1A7285AF002D294E /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,11 +248,15 @@
 				0CBFB4271A14BD94007DCC1E /* Podfile */,
 				0CBFB41A1A14B4A1007DCC1E /* AppDelegate.h */,
 				48EB637C1A2F6CD000D344A1 /* GeneralViewController.h */,
+				0C0D90471A725A19002D294E /* UINavigationController+Orientation.h */,
 				0CBFB41B1A14B4A1007DCC1E /* AppDelegate.m */,
 				48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */,
 				0CBFB41D1A14B4A1007DCC1E /* main.m */,
+				0C0D90481A725A19002D294E /* UINavigationController+Orientation.m */,
 				48EB63781A2C871100D344A1 /* PrefixHeader.pch */,
+				0C2A4B9D1A768C610093910A /* Tutorial.pdf */,
 				0CBFB41C1A14B4A1007DCC1E /* Info.plist */,
+				0C0D904C1A729279002D294E /* TrainingPrograms.plist */,
 				0CBFB4251A14B561007DCC1E /* storage.sqlite */,
 				0CEB9D141A1A58B800E397A4 /* Localizable.strings */,
 			);
@@ -255,6 +272,7 @@
 				0CBFB4311A14FE9F007DCC1E /* Exercise.h */,
 				48EB63791A2CBA2700D344A1 /* Media.h */,
 				0CBFB4291A14CB46007DCC1E /* Program.h */,
+				0C0D90531A72ABFF002D294E /* PurchaseManager.h */,
 				48998DBE1A1E4F24001C89F2 /* Training.h */,
 				487F16151A432A19007907D9 /* ZoomableView.h */,
 				0CA9B0571A1CEBB6002711C6 /* DBManager.m */,
@@ -263,6 +281,7 @@
 				0CBFB4321A14FE9F007DCC1E /* Exercise.m */,
 				48EB637A1A2CBA2700D344A1 /* Media.m */,
 				0CBFB42A1A14CB46007DCC1E /* Program.m */,
+				0C0D90541A72ABFF002D294E /* PurchaseManager.m */,
 				48998DBF1A1E4F24001C89F2 /* Training.m */,
 				487F16161A432A19007907D9 /* ZoomableView.m */,
 			);
@@ -323,6 +342,7 @@
 		FE5098E32EAA6EB0FDBF6C8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0C0D904A1A7285AF002D294E /* StoreKit.framework */,
 				0C1B4F401A5174B200109123 /* libz.dylib */,
 				0CBFB42C1A14D202007DCC1E /* libPods-TrainingTogether-FMDB.a */,
 				D77BDAAF47963FBBF9DB516D /* libPods-TrainingTogether.a */,
@@ -382,6 +402,11 @@
 					0CBFB3E41A14AF0E007DCC1E = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = N328QHYU5S;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					0CBFB3FD1A14AF0E007DCC1E = {
 						CreatedOnToolsVersion = 6.1;
@@ -418,6 +443,7 @@
 				0C9FBA941A68068800EDE4BC /* ProgramSelectionViewController.xib in Resources */,
 				0C28EA5C1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib in Resources */,
 				0CBFB4261A14B561007DCC1E /* storage.sqlite in Resources */,
+				0C2A4B9E1A768C610093910A /* Tutorial.pdf in Resources */,
 				48EB63861A309E4600D344A1 /* DifficultyCell_iPad.xib in Resources */,
 				0CBFB3F61A14AF0E007DCC1E /* Images.xcassets in Resources */,
 				0CF91A871A7010E400260F26 /* PreviewViewController_iPad.xib in Resources */,
@@ -434,6 +460,7 @@
 				0CBFB41F1A14B4A1007DCC1E /* Info.plist in Resources */,
 				0CA9B0551A1CDA8E002711C6 /* LevelSelectViewController.xib in Resources */,
 				48B66CA01A37163F00E28791 /* ProgramDetailViewController_iPad.xib in Resources */,
+				0C0D904D1A729279002D294E /* TrainingPrograms.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,8 +519,10 @@
 				0CBFB4331A14FE9F007DCC1E /* Exercise.m in Sources */,
 				0CBFB42B1A14CB46007DCC1E /* Program.m in Sources */,
 				48EB637B1A2CBA2700D344A1 /* Media.m in Sources */,
+				0C0D90491A725A19002D294E /* UINavigationController+Orientation.m in Sources */,
 				48998DC01A1E4F24001C89F2 /* Training.m in Sources */,
 				0CBFB4301A14F6CB007DCC1E /* Difficulty.m in Sources */,
+				0C0D90551A72ABFF002D294E /* PurchaseManager.m in Sources */,
 				0CBFB41E1A14B4A1007DCC1E /* AppDelegate.m in Sources */,
 				487F16171A432A19007907D9 /* ZoomableView.m in Sources */,
 				0C9FBA981A68096A00EDE4BC /* ProgramSelectionView.m in Sources */,
@@ -635,7 +664,7 @@
 					"$(PROJECT_DIR)/TrainingTogether/External/TestFlight",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "72887c0b-7a8a-4d8e-912b-7a5ccc490412";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -645,8 +674,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = $SRCROOT/TrainingTogether/SupportingFiles/PrefixHeader.pch;
@@ -659,7 +688,7 @@
 					"$(PROJECT_DIR)/TrainingTogether/External/TestFlight",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "72887c0b-7a8a-4d8e-912b-7a5ccc490412";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

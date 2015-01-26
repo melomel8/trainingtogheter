@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProgramSelectionViewController">
             <connections>
+                <outlet property="container" destination="09r-i9-HLo" id="rNC-0U-uZ9"/>
+                <outlet property="helpButton" destination="t8H-9j-olu" id="D7b-YZ-b6c"/>
                 <outlet property="titleLabel" destination="mTT-Fo-PaJ" id="fss-Jb-GE2"/>
                 <outlet property="view" destination="iN0-l3-epB" id="4Fj-9a-FXW"/>
             </connections>
@@ -23,6 +25,21 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" id="09r-i9-HLo">
+                    <rect key="frame" x="84" y="212" width="600" height="600"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="t8H-9j-olu">
+                    <rect key="frame" x="0.0" y="136" width="768" height="30"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="helpButtonTapped:" destination="-1" eventType="touchUpInside" id="g07-bG-THM"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
             <point key="canvasLocation" x="460" y="372"/>

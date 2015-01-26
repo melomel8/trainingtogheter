@@ -46,6 +46,7 @@
     running = NO;
     
     timerControl = [DDHTimerControl timerControlWithType:DDHTimerTypeSolid];
+    timerControl.maxValue = duration;
     timerControl.frame = CGRectMake(self.view.center.x - TIMER_WIDTH, self.view.center.y - TIMER_WIDTH, TIMER_WIDTH * 2, TIMER_WIDTH * 2);
     timerControl.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin;
     timerControl.color = [UIColor orangeColor];

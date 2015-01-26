@@ -9,7 +9,7 @@
 #import "Training.h"
 
 @implementation Training
-@synthesize programId, difficultyId, exerciseId, numberOfSeries, repetitions, circuitRepetitions, charge, pauseSeconds, exercise, mediaPath;
+@synthesize programId, difficultyId, exerciseId, numberOfSeries, repetitions, circuitRepetitions, charge, pauseSeconds, circuitPauseSeconds, exercise, mediaPath;
 
 - (id)initFromResultSet:(FMResultSet*)resultSet;
 {
@@ -23,6 +23,7 @@
         circuitRepetitions  = [resultSet intForColumn:@"circuitRepetitions"];
         charge              = [resultSet intForColumn:@"charge"];
         pauseSeconds        = [resultSet intForColumn:@"pauseSeconds"];
+        circuitPauseSeconds = [resultSet intForColumn:@"circuitPauseSeconds"];
         mediaPath           = [resultSet stringForColumn:@"mediaPath"];
         exercise            = [[Exercise alloc] initFromResultSet:resultSet];
     }
