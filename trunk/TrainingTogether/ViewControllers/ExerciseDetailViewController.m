@@ -47,7 +47,6 @@ ZoomableView* zommedView;
     [super viewDidLoad];
     exerciseArray = [DBManager getMediasForExercise:ExerciseId];
     int NUM_PHOTOS = exerciseArray.count;
-    [self drawView];
     exerciseImgPageControl.numberOfPages = NUM_PHOTOS;
     exerciseImgPageControl.currentPage = 0;
 }
@@ -55,6 +54,7 @@ ZoomableView* zommedView;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self drawView];
     [self.navigationItem setTitle:NSLocalizedString(@"exerciseDetailTitle", @"Exercise Detail")];
     exerciseNameLabel.text = ExerciseName;
     exerciseRepChargeLabel.text = ExerciseRepCharge;
@@ -136,8 +136,7 @@ ZoomableView* zommedView;
     else //non è un Ipad
     {
         HEIGHT = HEIGHT_IPHONE;
-        WIDTH = WIDTH_IPHONE;
-        GAP = GAP_IPHONE;
+        GAP = 0;// GAP_IPHONE;
         x = GAP;
         y = 0;
         
@@ -150,14 +149,16 @@ ZoomableView* zommedView;
         [exerciseRepChargeLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Bold" size:(18.0f)]];
         
         //ISTRUZIONI
-        [exerciseInstructionsTextView setFrame: CGRectMake(24,341,272,212)];
+        //[exerciseInstructionsTextView setFrame: CGRectMake(24,341,272,212)];
         [exerciseInstructionsTextView setFont:[UIFont fontWithName:@"HelveticaNeue" size:(14.0f)]];
         
         //SCROLLVIEW
         [exerciseImgScrollView setFrame: CGRectMake(0,127,self.view.frame.size.width,150)];
         
         //PAGECONTROL
-        [exerciseImgPageControl setFrame: CGRectMake(132,278,56,37)];
+        //[exerciseImgPageControl setFrame: CGRectMake(132,278,56,37)];
+        
+        WIDTH = exerciseImgScrollView.frame.size.width;
         
     }
     
@@ -166,7 +167,7 @@ ZoomableView* zommedView;
     [exerciseImgScrollView setContentSize:CGSizeMake(((WIDTH*NUM_PHOTOS)+(GAP*2*NUM_PHOTOS)), HEIGHT)];
     
     [exerciseImgScrollView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
+    [exerciseImgScrollView setBackgroundColor:[UIColor clearColor]];
     
     for (int i=0; i<= NUM_PHOTOS-1; i++)
     {

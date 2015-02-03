@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ProgramSelectionViewController.h"
+#import "PreviewViewController.h"
 
 @interface AppDelegate ()
 
@@ -51,7 +52,9 @@
 {    
     [self createEditableCopyOfDb];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    ProgramSelectionViewController* programSelectionViewController = [[ProgramSelectionViewController alloc] initWithNibName:@"ProgramSelectionViewController" bundle:nil];
+//    ProgramSelectionViewController* programSelectionViewController = [[ProgramSelectionViewController alloc] initWithNibName:@"ProgramSelectionViewController" bundle:nil];
+    PreviewViewController* programSelectionViewController = [[PreviewViewController alloc] initWithNibName:@"PreviewViewController" bundle:nil];
+    
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:programSelectionViewController];
     
     

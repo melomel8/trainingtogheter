@@ -12,8 +12,13 @@
 
 #define IMAGE_VIEW_TAG 1
 #define LABEL_TAG 2
+#define TUTORIAL @"Tutorial"
+#define PLANNING @"Planning"
+#define TABLE @"Table"
 
-@interface LevelSelectViewController ()
+@interface LevelSelectViewController ()<UIActionSheetDelegate, UIDocumentInteractionControllerDelegate>
+
+- (void)navigationBarRightButtonTapped:(id)sender;
 
 @end
 
@@ -28,6 +33,10 @@
     {   // if iOS 7
         self.edgesForExtendedLayout = UIRectEdgeNone; //layout adjustements
     }
+    
+    //aggiungo il pulsante di action sulla barra
+    UIBarButtonItem* rightButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(navigationBarRightButtonTapped:)];
+    [self.navigationItem setRightBarButtonItem:rightButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -40,6 +49,12 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)navigationBarRightButtonTapped:(id)sender
+{
+    UIActionSheet* actionSheet = [[UIActionSheet alloc] initWithTitle:NSLocalizedString(@"help", @"Help") delegate:self cancelButtonTitle:NSLocalizedString(@"close", @"Close") destructiveButtonTitle:nil otherButtonTitles:NSLocalizedString(@"tutorial", @"Tutorial"), NSLocalizedString(@"trainingPlanning", @"Training Planning"), NSLocalizedString(@"exerciseTable", @"Exercise Table"), nil];
+    [actionSheet showInView:self.view];
 }
 
 #pragma mark - UITableViewDataSource
@@ -110,5 +125,31 @@
     }
 }
 
+#pragma mark - UIActionSheet Delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSString* buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
+    NSString* resourceName = @"";
+    if ([buttonTitle isEqualToString:NSLocalizedString(@"tutorial", @"Tutorial")])
+        resourceName = TUTORIAL;
+    else if ([buttonTitle isEqualToString:NSLocalizedString(@"trainingPlanning", @"Training Planning")])
+        resourceName = PLANNING;
+    else
+        resourceName = TABLE;
+    
+    NSURL* url = [[NSBundle mainBundle] URLForResource:resourceName withExtension:@"pdf"];
+    UIDocumentInteractionController* docPreview = [UIDocumentInteractionController interactionControllerWithURL:url];
+    [docPreview setDelegate:self];
+    [docPreview presentPreviewAnimated:YES];
+    
+}
+
+#pragma mark - UIDocumentInteraction Delegate
+
+- (UIViewController*)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller
+{
+    return self;
+}
 
 @end

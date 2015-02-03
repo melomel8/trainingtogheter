@@ -13,6 +13,11 @@
 "selectYourProgramTitle"    = "Select Your Program";
 "help"                      = "Help";
 
+/* HELP MENU */
+"tutorial"                  = "Tutorial";
+"trainingPlanning"          = "Training Planning";
+"exerciseTable"             = "Table of Exercises";
+
 /* TRAINING LEVELS */
 "basic"         =   "Basic";
 "easy"          =   "Easy";
