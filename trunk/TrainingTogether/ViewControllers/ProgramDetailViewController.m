@@ -78,7 +78,13 @@
     programDetailLabelExerciseName.text= NSLocalizedString(currentTraining.exercise.ExerciseName, currentTraining.exerciseName);
     programDetailLabelRepCharge.text= [NSString stringWithFormat:@"%@: %dx%d\" r.%d\" - %@: %d\"", NSLocalizedString(@"normal", @"Normal"), (int)currentTraining.numberOfSeries, (int)currentTraining.repetitions, (int)currentTraining.pauseSeconds, NSLocalizedString(@"circuit", @"circuit"), (int)currentTraining.circuitRepetitions];
     
-    UIImage* progDetailImage = [UIImage imageNamed:currentTraining.mediaPath];
+    NSArray* resComponents = [currentTraining.mediaPath componentsSeparatedByString:@"."];
+    NSString* resType = [resComponents objectAtIndex:resComponents.count-1];
+    NSString* resName = [[currentTraining.mediaPath componentsSeparatedByString:[NSString stringWithFormat:@".%@", resType]] objectAtIndex:0];
+    UIImage* progDetailImage = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:resName ofType:resType]];
+    
+    //TODO: cancellare dopo test
+    //UIImage* progDetailImage = [UIImage imageNamed:currentTraining.mediaPath];
     DLog(@"***CARICO NOME FOTO: %@ ***",currentTraining.mediaPath);
     programDetailImageView.image = progDetailImage;
     

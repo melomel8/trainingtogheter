@@ -138,8 +138,6 @@
     [self addSubview:imgView];
 }
 
-
-
 #pragma mark - UIView Methods
 
 - (void)drawRect:(CGRect)rect

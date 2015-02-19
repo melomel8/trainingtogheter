@@ -39,7 +39,15 @@
     
     //istanzio le prime due immagini e faccio partire il timer per lo slideshow
     Media* firstMedia = [medias objectAtIndex:0];
-    UIImage* firstImage = [UIImage imageNamed:firstMedia.mediaPath];
+    
+    
+    NSArray* resComponents = [firstMedia.mediaPath componentsSeparatedByString:@"."];
+    NSString* resType = [resComponents objectAtIndex:resComponents.count-1];
+    NSString* resName = [[firstMedia.mediaPath componentsSeparatedByString:[NSString stringWithFormat:@".%@", resType]] objectAtIndex:0];
+    UIImage* firstImage = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:resName ofType:resType]];
+    
+    //TODO: cancellare dopo test
+    //UIImage* firstImage = [UIImage imageNamed:firstMedia.mediaPath];
     
     [frontImageView setImage:firstImage];
     
@@ -81,7 +89,13 @@
             currentIndex = 0;
         Media* firstMedia = [medias objectAtIndex:currentIndex];
         
-        UIImage* firstImage = [UIImage imageNamed:firstMedia.mediaPath];
+        NSArray* resComponents = [firstMedia.mediaPath componentsSeparatedByString:@"."];
+        NSString* resType = [resComponents objectAtIndex:resComponents.count-1];
+        NSString* resName = [[firstMedia.mediaPath componentsSeparatedByString:[NSString stringWithFormat:@".%@", resType]] objectAtIndex:0];
+        UIImage* firstImage = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:resName ofType:resType]];
+        
+        //TODO: cancellare dopo test_-
+        //UIImage* firstImage = [UIImage imageNamed:firstMedia.mediaPath];
         
         [frontImageView setImage:firstImage];
         

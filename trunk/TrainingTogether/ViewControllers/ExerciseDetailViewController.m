@@ -173,7 +173,12 @@ ZoomableView* zommedView;
     {
         Media* medias = [[Media alloc] init];
         medias = [exerciseArray objectAtIndex:i];
-        UIImage* exerciseImage = [UIImage imageNamed:medias.mediaPath];
+        NSArray* resComponents = [medias.mediaPath componentsSeparatedByString:@"."];
+        NSString* resType = [resComponents objectAtIndex:resComponents.count-1];
+        NSString* resName = [[medias.mediaPath componentsSeparatedByString:[NSString stringWithFormat:@".%@", resType]] objectAtIndex:0];
+        UIImage* exerciseImage = [[UIImage alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:resName ofType:resType]];
+        //TODO: cancellare dopo test
+        //UIImage* exerciseImage = [UIImage imageNamed:medias.mediaPath];
         DLog(@"IMG: %@", medias.mediaPath);
         UIImageView* exerciseImageView = [[UIImageView alloc] initWithImage:exerciseImage];
         [exerciseImageView setFrame:CGRectMake(x, y, WIDTH, HEIGHT)];
