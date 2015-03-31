@@ -10,6 +10,8 @@
 #import "ProgramSelectionViewController.h"
 #import "PreviewViewController.h"
 
+#define USER_INFO_KEY_APP_VERSION @"AppVersion"
+
 @interface AppDelegate ()
 
 - (void)createEditableCopyOfDb;
@@ -24,9 +26,11 @@
     NSArray* searchPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* documentFolderPath = [searchPaths objectAtIndex:0];
     dbFilePath = [documentFolderPath stringByAppendingPathComponent:@"storage.sqlite"];
+    NSString* currentAppVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString* lastAppVersion = [[NSUserDefaults standardUserDefaults] objectForKey:USER_INFO_KEY_APP_VERSION];
     
     //copia della base di dati
-    if (![[NSFileManager defaultManager] fileExistsAtPath:dbFilePath])
+    if (!lastAppVersion || ![lastAppVersion isEqualToString:currentAppVersion] || ![[NSFileManager defaultManager] fileExistsAtPath:dbFilePath])
     {
         NSString* backupDbPath = [[NSBundle mainBundle] pathForResource:@"storage" ofType:@"sqlite"];
         if (backupDbPath == nil)
@@ -43,6 +47,7 @@
             else
             {
                 DLog(@"Copying database succeed");
+                [[NSUserDefaults standardUserDefaults] setObject:currentAppVersion forKey:USER_INFO_KEY_APP_VERSION];
             }
         }
     }
