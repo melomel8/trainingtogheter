@@ -117,8 +117,10 @@
 "instruction39"  =   "Dynamically perform the sequence of pictures for the time indicated by the chosen training program, trying to make the most fluent and continuous movement as possible. Keep positions for about 1 second. Attention: starting at the location of a 2 supports bench you will be able to perform this last position bench. It is important to maintain body stability and control during the two phases, that of expulsion and that contact between the elbow and knee opposite limbs. Always carry and dynamically opposing limbs into contact by impact for a second his elbow with the opposite knee, then return to the start position. Perform the exercise for the entire duration of the programme and then repeat with the opposite limbs.";
 
 /* MESSAGES*/
-"noProgramsTitle"   =   "No Programs";
-"noProgramsMessage" =   "There are any programs for this level";
+"noProgramsTitle"    =   "No Programs";
+"noProgramsMessage"  =   "There are any programs for this level";
+"notExpectedTitle"   =   "Not Expected View";
+"notExpectedMessage" =   "View not expected for the selected program";
 
 /* MISC */
 "undo" = "Undo";

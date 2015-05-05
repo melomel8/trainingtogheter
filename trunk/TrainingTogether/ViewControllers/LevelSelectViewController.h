@@ -13,8 +13,9 @@
     IBOutlet    UITableView*        levelTable;
     IBOutlet    UITableViewCell*    levelCell;
                 NSArray*            difficultiesArray;
+                NSString*           objectToDisplay;    //per capire se andranno visualizzati i pdf o l'elenco degli esercizi
 }
 
-
+@property (nonatomic, retain) NSString* objectToDisplay;
 
 @end

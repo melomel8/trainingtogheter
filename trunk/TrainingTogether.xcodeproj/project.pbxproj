@@ -48,6 +48,15 @@
 		48998DBD1A1E4741001C89F2 /* ProgramDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48998DBC1A1E4741001C89F2 /* ProgramDetailCell.xib */; };
 		48998DC01A1E4F24001C89F2 /* Training.m in Sources */ = {isa = PBXBuildFile; fileRef = 48998DBF1A1E4F24001C89F2 /* Training.m */; };
 		48B66CA01A37163F00E28791 /* ProgramDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48B66C9F1A37163F00E28791 /* ProgramDetailViewController_iPad.xib */; };
+		48E405781AEE6DDA00ABAF34 /* 01_Basic.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 48E405721AEE6DDA00ABAF34 /* 01_Basic.pdf */; };
+		48E405791AEE6DDA00ABAF34 /* 02_Easy.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 48E405731AEE6DDA00ABAF34 /* 02_Easy.pdf */; };
+		48E4057A1AEE6DDA00ABAF34 /* 03_Average.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 48E405741AEE6DDA00ABAF34 /* 03_Average.pdf */; };
+		48E4057B1AEE6DDA00ABAF34 /* 04_Advanced.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 48E405751AEE6DDA00ABAF34 /* 04_Advanced.pdf */; };
+		48E4057C1AEE6DDA00ABAF34 /* 05_Top.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 48E405761AEE6DDA00ABAF34 /* 05_Top.pdf */; };
+		48E4057D1AEE6DDA00ABAF34 /* 06_Over-the-Top.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 48E405771AEE6DDA00ABAF34 /* 06_Over-the-Top.pdf */; };
+		48E405821AEE7BAE00ABAF34 /* ProgramSelectViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E405801AEE7BAE00ABAF34 /* ProgramSelectViewController.xib */; };
+		48E405841AEE7DA600ABAF34 /* ProgramSelectViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48E405831AEE7DA600ABAF34 /* ProgramSelectViewController_iPad.xib */; };
+		48E405871AEE843200ABAF34 /* ProgramSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E405861AEE843200ABAF34 /* ProgramSelectViewController.m */; };
 		48EB637B1A2CBA2700D344A1 /* Media.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EB637A1A2CBA2700D344A1 /* Media.m */; };
 		48EB637E1A2F6CD000D344A1 /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48EB637D1A2F6CD000D344A1 /* GeneralViewController.m */; };
 		48EB63801A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48EB637F1A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib */; };
@@ -133,6 +142,16 @@
 		48998DBE1A1E4F24001C89F2 /* Training.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Training.h; sourceTree = "<group>"; };
 		48998DBF1A1E4F24001C89F2 /* Training.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Training.m; sourceTree = "<group>"; };
 		48B66C9F1A37163F00E28791 /* ProgramDetailViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		48E405721AEE6DDA00ABAF34 /* 01_Basic.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 01_Basic.pdf; sourceTree = "<group>"; };
+		48E405731AEE6DDA00ABAF34 /* 02_Easy.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 02_Easy.pdf; sourceTree = "<group>"; };
+		48E405741AEE6DDA00ABAF34 /* 03_Average.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 03_Average.pdf; sourceTree = "<group>"; };
+		48E405751AEE6DDA00ABAF34 /* 04_Advanced.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 04_Advanced.pdf; sourceTree = "<group>"; };
+		48E405761AEE6DDA00ABAF34 /* 05_Top.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 05_Top.pdf; sourceTree = "<group>"; };
+		48E405771AEE6DDA00ABAF34 /* 06_Over-the-Top.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "06_Over-the-Top.pdf"; sourceTree = "<group>"; };
+		48E405801AEE7BAE00ABAF34 /* ProgramSelectViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramSelectViewController.xib; sourceTree = "<group>"; };
+		48E405831AEE7DA600ABAF34 /* ProgramSelectViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProgramSelectViewController_iPad.xib; sourceTree = "<group>"; };
+		48E405851AEE843200ABAF34 /* ProgramSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgramSelectViewController.h; sourceTree = "<group>"; };
+		48E405861AEE843200ABAF34 /* ProgramSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgramSelectViewController.m; sourceTree = "<group>"; };
 		48EB63781A2C871100D344A1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = PrefixHeader.pch; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		48EB63791A2CBA2700D344A1 /* Media.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Media.h; sourceTree = "<group>"; };
 		48EB637A1A2CBA2700D344A1 /* Media.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Media.m; sourceTree = "<group>"; };
@@ -246,6 +265,12 @@
 		0CBFB4191A14B4A1007DCC1E /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				48E405721AEE6DDA00ABAF34 /* 01_Basic.pdf */,
+				48E405731AEE6DDA00ABAF34 /* 02_Easy.pdf */,
+				48E405741AEE6DDA00ABAF34 /* 03_Average.pdf */,
+				48E405751AEE6DDA00ABAF34 /* 04_Advanced.pdf */,
+				48E405761AEE6DDA00ABAF34 /* 05_Top.pdf */,
+				48E405771AEE6DDA00ABAF34 /* 06_Over-the-Top.pdf */,
 				0CBFB4271A14BD94007DCC1E /* Podfile */,
 				0CBFB41A1A14B4A1007DCC1E /* AppDelegate.h */,
 				48EB637C1A2F6CD000D344A1 /* GeneralViewController.h */,
@@ -299,12 +324,14 @@
 				0C4F19A31A6FFE0200AECE59 /* PreviewViewController.h */,
 				48998DB51A1E38F9001C89F2 /* ProgramDetailViewController.h */,
 				0C9FBA901A68066700EDE4BC /* ProgramSelectionViewController.h */,
+				48E405851AEE843200ABAF34 /* ProgramSelectViewController.h */,
 				0C28EA561A5FEB8C0044D5A0 /* TimerViewController.h */,
 				489177941A27385D00FBDB91 /* ExerciseDetailViewController.m */,
 				0CA9B0501A1CDA1E002711C6 /* LevelSelectViewController.m */,
 				0C4F19A41A6FFE0200AECE59 /* PreviewViewController.m */,
 				48998DB61A1E38F9001C89F2 /* ProgramDetailViewController.m */,
 				0C9FBA911A68066700EDE4BC /* ProgramSelectionViewController.m */,
+				48E405861AEE843200ABAF34 /* ProgramSelectViewController.m */,
 				0C28EA571A5FEB8C0044D5A0 /* TimerViewController.m */,
 			);
 			path = ViewControllers;
@@ -329,6 +356,8 @@
 				0C366E651A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib */,
 				0C4F19A61A6FFEED00AECE59 /* PreviewViewController.xib */,
 				0CF91A861A7010E400260F26 /* PreviewViewController_iPad.xib */,
+				48E405801AEE7BAE00ABAF34 /* ProgramSelectViewController.xib */,
+				48E405831AEE7DA600ABAF34 /* ProgramSelectViewController_iPad.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -441,18 +470,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CEB9D121A1A58B800E397A4 /* Localizable.strings in Resources */,
+				48E4057D1AEE6DDA00ABAF34 /* 06_Over-the-Top.pdf in Resources */,
 				0C6E671F1A1E0C4E007711BC /* DifficultyCell.xib in Resources */,
+				48E405841AEE7DA600ABAF34 /* ProgramSelectViewController_iPad.xib in Resources */,
 				0C9FBA941A68068800EDE4BC /* ProgramSelectionViewController.xib in Resources */,
+				48E4057C1AEE6DDA00ABAF34 /* 05_Top.pdf in Resources */,
 				0C28EA5C1A5FEBAF0044D5A0 /* TimerViewController_iPad.xib in Resources */,
+				48E405791AEE6DDA00ABAF34 /* 02_Easy.pdf in Resources */,
+				48E405821AEE7BAE00ABAF34 /* ProgramSelectViewController.xib in Resources */,
 				0CBFB4261A14B561007DCC1E /* storage.sqlite in Resources */,
 				0C2A4B9E1A768C610093910A /* Tutorial.pdf in Resources */,
 				48EB63861A309E4600D344A1 /* DifficultyCell_iPad.xib in Resources */,
 				0CBFB3F61A14AF0E007DCC1E /* Images.xcassets in Resources */,
 				0CF91A871A7010E400260F26 /* PreviewViewController_iPad.xib in Resources */,
 				48998DBD1A1E4741001C89F2 /* ProgramDetailCell.xib in Resources */,
+				48E405781AEE6DDA00ABAF34 /* 01_Basic.pdf in Resources */,
 				489177991A27391100FBDB91 /* ExerciseDetailViewController.xib in Resources */,
 				0CD6BBBB1A7A46970004618B /* Planning.pdf in Resources */,
 				48EB638A1A31F59D00D344A1 /* LevelSelectViewController_iPad.xib in Resources */,
+				48E4057A1AEE6DDA00ABAF34 /* 03_Average.pdf in Resources */,
 				0C28EA5A1A5FEBA20044D5A0 /* TimerViewController.xib in Resources */,
 				0C4F19A71A6FFEED00AECE59 /* PreviewViewController.xib in Resources */,
 				48EB63801A309DB000D344A1 /* ExerciseDetailViewController_iPad.xib in Resources */,
@@ -462,6 +498,7 @@
 				0C366E661A6E791700FB3AAD /* ProgramSelectionViewController_iPad.xib in Resources */,
 				0CBFB41F1A14B4A1007DCC1E /* Info.plist in Resources */,
 				0CA9B0551A1CDA8E002711C6 /* LevelSelectViewController.xib in Resources */,
+				48E4057B1AEE6DDA00ABAF34 /* 04_Advanced.pdf in Resources */,
 				48B66CA01A37163F00E28791 /* ProgramDetailViewController_iPad.xib in Resources */,
 				0CD6BBBC1A7A46970004618B /* Table.pdf in Resources */,
 				0C0D904D1A729279002D294E /* TrainingPrograms.plist in Resources */,
@@ -532,6 +569,7 @@
 				0C9FBA981A68096A00EDE4BC /* ProgramSelectionView.m in Sources */,
 				0C28EA611A5FFA590044D5A0 /* UIBAlertView.m in Sources */,
 				0C4F19A51A6FFE0200AECE59 /* PreviewViewController.m in Sources */,
+				48E405871AEE843200ABAF34 /* ProgramSelectViewController.m in Sources */,
 				0C28EA581A5FEB8C0044D5A0 /* TimerViewController.m in Sources */,
 				0C9FBA921A68066700EDE4BC /* ProgramSelectionViewController.m in Sources */,
 				0CA9B05B1A1CECD0002711C6 /* DBUtil.m in Sources */,

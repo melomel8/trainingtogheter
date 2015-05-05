@@ -24,6 +24,8 @@
 
 @implementation LevelSelectViewController
 
+@synthesize objectToDisplay;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -110,18 +112,68 @@
     Difficulty* d = [difficultiesArray objectAtIndex:indexPath.row];
     NSInteger difficultyId = d.DifficultyId;
     NSInteger programId = [DBManager getProgramIdForDifficultyId:difficultyId];
-    if (programId != -1)
+    
+    //Controllo il tipo di visualizzazione da realizzare
+    if ([objectToDisplay isEqualToString:@"ESERCIZI"])
     {
-        ProgramDetailViewController* programDetailVC = [[ProgramDetailViewController alloc] initWithNibName:@"ProgramDetailViewController" bundle:nil];
-        programDetailVC.DifficultyId = difficultyId;
-        programDetailVC.ProgramId = programId;
-        [self.navigationController pushViewController:programDetailVC animated:YES];
+        
+        if (programId != -1)
+        {
+            ProgramDetailViewController* programDetailVC = [[ProgramDetailViewController alloc] initWithNibName:@"ProgramDetailViewController" bundle:nil];
+            programDetailVC.DifficultyId = difficultyId;
+            programDetailVC.ProgramId = programId;
+            [self.navigationController pushViewController:programDetailVC animated:YES];
+            [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        }
+        else
+        {
+            UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"noProgramsTitle", @"No Programs") message:NSLocalizedString(@"noProgramsMessage", @"noProgramsMessage") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alertView show];
+        }
+    }
+    else if ([objectToDisplay isEqualToString:@"PDF"])
+    {
+        NSString* namedoc;
+        //visualizzo i pdf
+        switch (indexPath.row+1)
+        {
+            case 1:
+                namedoc= @"01_Basic";
+                break;
+            case 2:
+                namedoc= @"02_Easy";
+                break;
+            case 3:
+                namedoc= @"03_Average";
+                break;
+            case 4:
+                namedoc= @"04_Advanced";
+                break;
+            case 5:
+                namedoc= @"05_Top";
+                break;
+            case 6:
+                namedoc= @"06_Over-the-Top";
+                break;
+                
+            default:
+                break;
+        }
+        
+        NSURL* url = [[NSBundle mainBundle] URLForResource:namedoc withExtension:@"pdf"];
+        UIDocumentInteractionController* docPreview = [UIDocumentInteractionController interactionControllerWithURL:url];
+        [docPreview setDelegate:self];
+        [docPreview presentPreviewAnimated:YES];
         [tableView deselectRowAtIndexPath:indexPath animated:NO];
+        
     }
     else
     {
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"noProgramsTitle", @"No Programs") message:NSLocalizedString(@"noProgramsMessage", @"noProgramsMessage") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        //se non si cade nei 2 precedenti casi, si ritorna errore
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"notExpectedTitle", @"Not Expected View") message:NSLocalizedString(@"notExpectedMessage", @"notExpectedMessage") delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
+
+    
     }
 }
 
@@ -135,8 +187,10 @@
         resourceName = TUTORIAL;
     else if ([buttonTitle isEqualToString:NSLocalizedString(@"trainingPlanning", @"Training Planning")])
         resourceName = PLANNING;
-    else
+    else if ([buttonTitle isEqualToString:NSLocalizedString(@"exerciseTable", @"Exercise Table")])
         resourceName = TABLE;
+    else
+        return;
     
     NSURL* url = [[NSBundle mainBundle] URLForResource:resourceName withExtension:@"pdf"];
     UIDocumentInteractionController* docPreview = [UIDocumentInteractionController interactionControllerWithURL:url];

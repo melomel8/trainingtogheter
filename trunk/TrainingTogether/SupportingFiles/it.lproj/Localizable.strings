@@ -117,8 +117,10 @@
 "instruction39"  =   "Eseguire in modo dinamico la sequenza di foto per il tempo indicato dal programma di allenamento scelto, cercando di rendere il movimento più fluente e continuo possibile. Mantenere le posizioni per 1 secondo circa. Attenzione: Partendo dalla posizione di banch a 2 appoggi sarai in grado di eseguire questa ultima posizione bench. È importante mantenere la stabilità del corpo e il controllo durante le due fasi, quella di allontanamento e quella di contatto tra gomito e ginocchio degli arti opposti. Portare sempre e in modo dinamico gli arti opposti a contatto, facendo impattare per un secondo il gomito con il ginocchio opposto, tornare poi alla posizione iniziale. Eseguire l’esercizio per tutta la durata del programma e poi ripetere con gli arti opposti.";
 
 /* MESSAGGI */
-"noProgramsTitle"   =   "Nessun Programma";
-"noProgramsMessage" =   "Non ci sono programmi per il livello selezionato";
+"noProgramsTitle"    =   "Nessun Programma";
+"noProgramsMessage"  =   "Non ci sono programmi per il livello selezionato";
+"notExpectedTitle"   =   "Visualizzazione non prevista";
+"notExpectedMessage" =   "Visualizzazione non prevista per questo programma";
 
 /* MISC */
 "undo" = "Annulla";

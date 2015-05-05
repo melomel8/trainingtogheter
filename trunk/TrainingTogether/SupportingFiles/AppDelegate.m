@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ProgramSelectionViewController.h"
 #import "PreviewViewController.h"
+#import "ProgramSelectViewController.h"
+
 
 #define USER_INFO_KEY_APP_VERSION @"AppVersion"
 
@@ -58,7 +60,12 @@
     [self createEditableCopyOfDb];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 //    ProgramSelectionViewController* programSelectionViewController = [[ProgramSelectionViewController alloc] initWithNibName:@"ProgramSelectionViewController" bundle:nil];
-    PreviewViewController* programSelectionViewController = [[PreviewViewController alloc] initWithNibName:@"PreviewViewController" bundle:nil];
+    
+    //Aggiunta un secondo programma. E? necessario, quindi passare da un nuovo viewController per la scelta.
+    //PreviewViewController* programSelectionViewController = [[PreviewViewController alloc] initWithNibName:@"PreviewViewController" bundle:nil];
+    
+    ProgramSelectViewController* programSelectionViewController = [[ProgramSelectViewController alloc] initWithNibName:@"ProgramSelectViewController" bundle:nil ];
+    
     
     UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:programSelectionViewController];
     
