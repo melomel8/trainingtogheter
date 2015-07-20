@@ -19,6 +19,7 @@
     NSInteger   CircuitRecovery;
     NSString*   ExerciseInstructions;
     NSArray*    exerciseArray;
+    NSArray*    videosArray;
     
     IBOutlet    UIView*         viewContainer;
     IBOutlet    UILabel*        exerciseNameLabel;

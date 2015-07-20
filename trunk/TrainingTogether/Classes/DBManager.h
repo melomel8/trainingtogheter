@@ -47,6 +47,12 @@
 +(NSArray*)getMediasForExercise:(NSInteger)exerciseId;
 
 /**
+ Ritorna tutti i media video di un certo exerciseId
+ @return NSArray* che contiene oggetti di tipo Media
+ */
++(NSArray*)getVideosForExercise:(NSInteger) exerciseId;
+
+/**
  Ritorna tutti i media diversi dai video di un certo programma
  @param programId Identificativo del programma. -1 per non filtrare
  @return NSArray* che contiene oggetti di tipo Media

@@ -46,6 +46,7 @@ ZoomableView* zommedView;
 - (void)viewDidLoad {
     [super viewDidLoad];
     exerciseArray = [DBManager getMediasForExercise:ExerciseId];
+    videosArray = [DBManager getVideosForExercise:ExerciseId];
     int NUM_PHOTOS = exerciseArray.count;
     exerciseImgPageControl.numberOfPages = NUM_PHOTOS;
     exerciseImgPageControl.currentPage = 0;
@@ -59,7 +60,17 @@ ZoomableView* zommedView;
     exerciseNameLabel.text = ExerciseName;
     exerciseRepChargeLabel.text = ExerciseRepCharge;
     exerciseInstructionsTextView.text = NSLocalizedString(ExerciseInstructions, ExerciseInstructions);
-    
+    if (videosArray && videosArray.count > 0)
+    {
+        UIBarButtonItem* videoButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay target:self action:@selector(playVideoButtonTapped:)];
+        self.navigationItem.rightBarButtonItem = videoButton;
+    }
+}
+
+- (void)playVideoButtonTapped:(id)sender
+{
+    Media* currentMedia = [videosArray objectAtIndex:0];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:currentMedia.mediaPath]];
 }
 
 #pragma mark - Mie Procedure
